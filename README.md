@@ -8,11 +8,21 @@
 
     - [Markdown语法](https://zhuanlan.zhihu.com/p/56943330)
 
-### linux IPC
+## head file
 
-#### e1-MultiProcesses Programmnig
+```c
+#include <stdio.h>
+fgets();
 
-##### fork()
+#include <unistd.h>
+pipe();
+```
+
+## linux IPC
+
+### e1-MultiProcesses Programmnig
+
+#### fork()
 
 功能：创建一个新的进程
 
@@ -26,7 +36,7 @@ pid_t fork();
 
 返回值：调用成功，则返回两次。对子进程返回0，对父进程返回子进程号，这也是最方便的区分父子进程的方法。调用失败则返回-1给父进程，子进程不生成。
 
-##### wait()
+#### wait()
 
 功能：等待子进程返回
 
@@ -40,7 +50,7 @@ pid_t wait(int * stat_loc);
 
 返回值：等待到一个子进程返回时，返回值为该子进程号，同时stat_loc带回子进程的返回状态信息（参考exit）。若无子进程，则返回值为-1。
 
-##### exit()
+#### exit()
 
 功能：终止进程
 
@@ -53,7 +63,7 @@ void exit(int status);
 
 返回值：无
 
-##### exec
+#### exec
 
 ```c
 #include <unistd.h>
