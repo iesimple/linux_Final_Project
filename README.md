@@ -70,3 +70,15 @@ execlp (char *file, char *arg0, …, (char *)0);
 - 调用exec并不创建新进程，前后的进程ID并未改变。exec只是用另一个新程序替换了当前进程的正文、数据、堆和栈段。
 
 - 当exec调用成功，调用进程的用户空间将重建，代码段则由新程序代换，这就意味着：一旦exec调用成功，将不返回给调用者，原来程序中该调用下的诸语句将永远不被执行。exec调用返回给调用者的唯一可能是该调用失败了
+
+##### pthread_create
+
+```c
+#include <pthread.h>
+int pthread_create(
+                 pthread_t *restrict tidp,   //新创建的线程ID指向的内存单元。
+                 const pthread_attr_t *restrict attr,  //线程属性，默认为NULL
+                 void *(*start_rtn)(void *), //新创建的线程从start_rtn函数的地址开始运行
+                 void *restrict arg //默认为NULL。若上述函数需要参数，将参数放入结构中并将地址作为arg传入。
+                  );
+```
