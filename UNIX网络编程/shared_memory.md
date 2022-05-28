@@ -43,7 +43,7 @@ int msync(
 // 成功返回0，出错返回-1
 ```
 
-### BSD匿名内存映射
+### BSD 匿名内存映射
 
 ```c
 // 彻底避免文件的创建和打开（不需要fd描述符）
@@ -52,9 +52,9 @@ void *mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset);
 // fd = -1
 ```
 
->内核允许映射区的大小（mmap第二个参数）大于实际文件的大小，但是内核会跟踪文件的实际大小，同时使我们无法访问超出实际文件的映射区域。
+> 内核允许映射区的大小（mmap 第二个参数）大于实际文件的大小，但是内核会跟踪文件的实际大小，同时使我们无法访问超出实际文件的映射区域。
 
-## Posix共享内存区
+## Posix 共享内存区
 
 无亲缘关系进程间共享内存区
 
@@ -104,4 +104,27 @@ struct stat {
 
 ```
 
+## oflags
 
+| 说明           | mq_open    | sem_open | shm_open |
+| -------------- | ---------- | -------- | -------- |
+| 只读           | O_RDONLY   |          | O_RDONLY |
+| 只写           | O_WRONLY   |          |          |
+| 只写           | O_RDWR     |          | O_RDWR   |
+| 若不存在则创建 | O_CREAT    | O_CREAT  | O_CREAT  |
+| 排他性创建     | O_EXEL     | O_EXEL   | O_EXEL   |
+| 非阻塞模式     | O_NONBLOCK |          |          |
+| 若已存在则截断 |            |          | O_TRUNC  |
+
+## mode
+
+在 oflags 指定有 O_CREAT 时，由另一个参数 mode 指定权限位
+
+| 常值    | 说明         |
+| ------- | ----------- |
+| S_IRUSR | 用户(属组)读 |
+| S_IWUSR | 用户(属主)写 |
+| S_IRGRP | (属)组成员读 |
+| S_IWGRP | (属)组成员写 |
+| S_IROTH | 其他用户读   |
+| S_IWOTH | 其他用户写   |
