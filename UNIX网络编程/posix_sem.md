@@ -90,9 +90,9 @@ int sem_getvalue(sem_t *sem, int *valp);
 
 这两个常数值通常定义在<unistd.h>中，也可以通过sysconf函数获取
 
-## FIFO实现信号量 
+## FIFO实现信号量
 
-## 内存映射I/O实现信号量 
+## 内存映射I/O实现信号量
 
 ## System V信号量实现Posix信号量
 
