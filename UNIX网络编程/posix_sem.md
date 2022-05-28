@@ -1,3 +1,11 @@
+<head>
+   <style>
+      table {
+         margin: auto;
+      }
+   </style>
+</head>
+
 # Posix 信号量
 
 - Posix 有名信号量：使用 Posix IPC name 标识，可用于进程或线程间的同步
@@ -24,12 +32,6 @@
 1. 同时信号量还有一个互斥锁没有的特性，互斥锁总是由锁住它的线程打开，而信号量的 post 却不必由执行过它的 wait 操作的同一线程执行
 2. 互斥锁要么被锁住，要么被解开
 3. 信号量的 post 可能会丢失，如果没有等待的线程
-
-<style>
-   table {
-       margin: auto;
-   }
-</style>
 
 **有名信号量** & **基于内存/无名信号量**
 
