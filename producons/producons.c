@@ -17,6 +17,7 @@
 #include <sys/stat.h>
 #include <pthread.h>
 #include <errno.h>
+#include <string.h>
 
 #define NBUFF 10
 #define SEM_MUTEX "mutex"
@@ -58,7 +59,7 @@ int main(int argc, char **argv)
     // 创建失败
     if (shared.mutex == SEM_FAILED || shared.nempty == SEM_FAILED || shared.nstored == SEM_FAILED)
     {
-        printf("%s, errno = %d\n", strerror(errno), errno);
+        printf("%s, errno = %d\n", strerror(errno),errno);
         exit(-1);
     }
     
