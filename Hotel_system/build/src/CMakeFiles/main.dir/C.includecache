@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/common_types.h
+
+/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.c
+systemInit.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+stdio.h
+-
+string.h
+-
+
+/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+stdio.h
+-
+common_types.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/common_types.h
+stdlib.h
+-
+

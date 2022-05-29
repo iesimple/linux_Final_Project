@@ -38,6 +38,11 @@ void *produce(void *), *consume(void *);
 
 int main(int argc, char **argv)
 {
+    char buff[255];
+    size_t len;
+    getcwd(buff, 255);
+    printf("%s\n", buff);
+
     // 当sem_open的oflag参数设置为O_CREAT | O_EXCL，最好先把可能存在的信号量删除一次，如下
     sem_unlink(SEM_MUTEX);
     sem_unlink(SEM_NEMPTR);
@@ -55,14 +60,14 @@ int main(int argc, char **argv)
     shared.mutex = sem_open(SEM_MUTEX, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 1);
     shared.nempty = sem_open(SEM_NEMPTR, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, NBUFF);
     shared.nstored = sem_open(SEM_NSTORED, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 0);
-    
+
     // 创建失败
     if (shared.mutex == SEM_FAILED || shared.nempty == SEM_FAILED || shared.nstored == SEM_FAILED)
     {
-        printf("%s, errno = %d\n", strerror(errno),errno);
+        printf("%s, errno = %d\n", strerror(errno), errno);
         exit(-1);
     }
-    
+
     // 下面这个不是很理解有什么用，没有好像没有影响
     // pthread_setconcurrency(2);
 
