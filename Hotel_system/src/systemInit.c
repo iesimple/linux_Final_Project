@@ -40,13 +40,11 @@ struct request *requestParse(char *line, __ssize_t len) {
             *(ptr + i) = atoi(token);
             i++;
             token = strsep(&line, " \r\n");
-            printf("%s ", token);
         }
     }
     strcat(tmp->name, token);
     token = strsep(&line, " \r\n");
     tmp->time = atoi(token);
-    printf("\n");
     return tmp;
 }
 
