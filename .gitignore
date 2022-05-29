@@ -1,4 +1,5 @@
 test/
 .vscode/
 style/
-/sem/build/
+/producons/build/
+/producons/bin/
