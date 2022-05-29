@@ -35,19 +35,19 @@
       <td>sem_init</td>
    </tr>
    <tr>
-      <td colspan="2">sem_wait</td>
+      <td colspan="2" align="center">sem_wait</td>
    </tr>
    <tr>
    <tr>
-       <td colspan="2">sem_trywait</td>
+       <td colspan="2" align="center">sem_trywait</td>
    </tr>
    <tr>
    <tr>
-      <td colspan="2">sem_post</td>
+      <td colspan="2" align="center">sem_post</td>
    </tr>
    <tr>
    <tr>
-      <td colspan="2">sem_getvalue</td>
+      <td colspan="2" align="center">sem_getvalue</td>
    </tr>
    <tr>
    <td>sem_close</td>
