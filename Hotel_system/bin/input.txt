@@ -23,8 +23,8 @@
 cutstomer1
 reserve 10 2022 3 5 10 sxh 2
 reserve 10 2022 3 5 10 sxh 1
-cancel 10 2023 10 2 5 20 kas 3
-cancel 10 2023 10 2 5 20 kas 10
+cancel 10 2023 10 2 5 kas 3
+cancel 10 2023 10 2 5 kas 10
 reserveblock 2 1 2022 3 6 4 asd 2
 reserveblock 2 1 2022 3 6 4 asd 10
 cancelblock 2 1 2022 3 5 3 sacs 5
@@ -35,8 +35,8 @@ end
 cutstomer2
 reserve 10 2022 3 5 10 sxh 2
 reserve 10 2022 3 5 10 sxh 1
-cancel 10 2023 10 2 5 20 kas 3
-cancel 10 2023 10 2 5 20 kas 10
+cancel 10 2023 10 2 5 kas 3
+cancel 10 2023 10 2 5 kas 10
 reserveblock 2 1 2022 3 6 4 asd 2
 reserveblock 2 1 2022 3 6 4 asd 10
 cancelblock 2 1 2022 3 5 3 sacs 5

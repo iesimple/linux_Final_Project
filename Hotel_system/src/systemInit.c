@@ -40,11 +40,13 @@ struct request *requestParse(char *line, __ssize_t len) {
             *(ptr + i) = atoi(token);
             i++;
             token = strsep(&line, " \r\n");
+            printf("%s ", token);
         }
     }
     strcat(tmp->name, token);
     token = strsep(&line, " \r\n");
     tmp->time = atoi(token);
+    printf("\n");
     return tmp;
 }
 
@@ -103,7 +105,7 @@ void print_file() {
     printf("\n");
     // 客人请求信息
     for (int i = 0; i < total_customer; i++) {
-        printf("%s\n", all_requests[i].name);
+        printf("%s", all_requests[i].name); // 读入的时候多了一个回车
         struct requestList *p = all_requests[i].listHead;
         while (p != NULL) {
             printf("%s %d %d %d %d %d %d %s %d\n",
