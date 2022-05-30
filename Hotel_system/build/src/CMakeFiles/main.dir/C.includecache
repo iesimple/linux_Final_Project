@@ -10,13 +10,23 @@
 
 ../include/names.h
 
-/home/os/桌面/linux_Final_Project/Hotel_system/src/main.c
+/home/os/桌面/linux_Final_Project/Hotel_system/src/process.c
+process.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
+pthread.h
+-
+semaphore.h
+-
 stdio.h
 -
-string.h
+unistd.h
 -
-systemInit.h
-/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+
+/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
+common_types.h
+-
+semaphore.h
+-
 
 /home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.c
 systemInit.h
@@ -25,12 +35,6 @@ stdio.h
 -
 string.h
 -
-
-/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
-stdio.h
--
-common_types.h
-/home/os/桌面/linux_Final_Project/Hotel_system/src/common_types.h
 stdlib.h
 -
 fcntl.h
@@ -45,6 +49,16 @@ unistd.h
 -
 semaphore.h
 -
+process.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
 names.h
-/home/os/桌面/linux_Final_Project/Hotel_system/src/names.h
+-
+common_types.h
+-
+
+/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+common_types.h
+-
+semaphore.h
+-
 

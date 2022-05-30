@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../bin/main"
   "../../bin/main.pdb"
   "CMakeFiles/main.dir/main.c.o"
+  "CMakeFiles/main.dir/process.c.o"
   "CMakeFiles/main.dir/systemInit.c.o"
 )
 

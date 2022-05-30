@@ -1,7 +1,11 @@
+#include <common_types.h>
+#include <semaphore.h>
+
 #ifndef HOTEL_SYSTEM_SYSTEMINIT
 #define HOTEL_SYSTEM_SYSTEMINIT
 
 extern roomInfo_shm *roomInfo;
+extern sem_t *threadsSem;
 
 /*
     对外接口函数

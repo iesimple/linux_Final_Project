@@ -17,18 +17,31 @@
 */
 int total_room, total_customer;
 int room_id[MAX_NUM_ROOM];
-struct customerRequests all_requests[MAX_NUM_CUSTOM];
+struct customerRequest all_requests[MAX_NUM_CUSTOM];
 /*
     共享内存区、信号量有关变量
 */
-int fd;
+int fd1, fd2;
 sem_t *roomSem;
 // extern定义，全局变量
-roomInfo_shm *roomInfo;
+roomInfo_shm *roomInfo = NULL;
+reserveInfo_shm *reserveInfo = NULL;
+sem_t *threadsSem = NULL;
+
+// 客人名字到他的预约信息的索引缓冲区
+name_index_Buff buff[BUFF_SIZE];
+/*
+    内部调用的函数
+*/
+struct request *requestParse(char *line, __ssize_t len);
+void fileReader(const char *filepath);
+void roomInfo_init(roomInfo_shm *roomInfo);
+void system_init();
+void system_exit();
 
 /**
  * @brief system启动，读取输入文件的内容，初始化宾馆信息，处理每个客人的请求
- * 
+ *
  * @param filepath 输入文件的路径，如果为NULL使用默认路径
  */
 void systemStart(const char *filepath) {
@@ -37,7 +50,10 @@ void systemStart(const char *filepath) {
     // 初始化宾馆房间信息
     system_init();
     // 请求处理开始
-    request_process(&all_requests, total_customer);
+    request_process(all_requests, total_customer);
+
+    // 退出程序，释放相关资源
+    system_exit();
     /*
         测试用，打印所有的输入信息
     */
@@ -65,30 +81,46 @@ struct request *requestParse(char *line, __ssize_t len) {
     struct request *tmp = (struct request *)malloc(sizeof(struct request));
     int *ptr = &tmp->room_num;
     int i = 0;
+    char cmd[15]; // 保存command的字符串形式
     char *token = strsep(&line, " \r\n");
     if (strcmp(token, "end") == 0)
         return NULL;
     memset(tmp, 0, sizeof(struct request));
-    strcpy(tmp->command, token); // command
+    strcpy(cmd, token); // command
 
     token = strsep(&line, " \r\n");
 
-    if (strcmp(tmp->command, "check")) {
+    if (strcmp(cmd, "check")) {
         while (i < 6 && token != NULL) {
-            if (i == 0 && (strcmp(tmp->command, "reserve") == 0 || strcmp(tmp->command, "cancel") == 0)) // 跳过房间数
-            {
-                i++;
-                continue;
-            } else if (i == 1 && (strcmp(tmp->command, "reserveany") == 0 || strcmp(tmp->command, "cancelany") == 0)) //跳过房间号
-            {
-                i++;
-                continue;
+            if (i == 0) {
+                if (strcmp(cmd, "reserve") == 0) {
+                    tmp->command = RESERVE;
+                    i++;
+                    continue;
+                } else if (strcmp(cmd, "cancel") == 0) {
+                    tmp->command = CANCEL;
+                    i++;
+                    continue;
+                } else if (strcmp(cmd, "reserveblock") == 0)
+                    tmp->command = RESERVEBLOCK;
+            } else if (i == 1) {
+                if (strcmp(cmd, "reserveany") == 0) {
+                    tmp->command = RESERVEANY;
+                    i++;
+                    continue;
+                } else if (strcmp(cmd, "cancelany") == 0) {
+                    tmp->command = CANCELANY;
+                    i++;
+                    continue;
+                } else if (strcmp(cmd, "cancelblock") == 0)
+                    tmp->command = CANCELBLOCK;
             }
             *(ptr + i) = atoi(token);
             i++;
             token = strsep(&line, " \r\n");
         }
-    }
+    } else
+        tmp->command = CHECK;
     strcat(tmp->name, token);
     token = strsep(&line, " \r\n");
     tmp->time = atoi(token);
@@ -97,7 +129,7 @@ struct request *requestParse(char *line, __ssize_t len) {
 
 /**
  * @brief 读取文件内容解析并存储到room_id, all_request
- * 
+ *
  * @param filepath 输入文件的路径，如果为NULL使用默认路径
  */
 void fileReader(const char *filepath) {
@@ -144,14 +176,13 @@ void fileReader(const char *filepath) {
 
 /**
  * @brief 房间信息（共享内存区）初始化
- * 
+ *
  * @param roomInfo_shm* 存储房间信息的共享内存区
  */
 void roomInfo_init(roomInfo_shm *roomInfo) {
-    for (int i = 0; i < total_room; i++) {
+    for (int i = 0; i < total_room; i++)
         roomInfo->room_id[i] = room_id[i];
-        roomInfo->flag[i] = false;
-    }
+    memset(roomInfo->flag, 0, sizeof(roomInfo->flag));
 }
 
 /**
@@ -159,33 +190,47 @@ void roomInfo_init(roomInfo_shm *roomInfo) {
  */
 void system_init() {
     // 创建并打开共享内存区
-    fd = shm_open(ROOM_INFO_SHM, O_CREAT | O_RDWR, 0644);
+    fd1 = shm_open(ROOM_INFO_SHM, O_CREAT | O_RDWR, 0644);
     // 设置共享内存区大小
-    ftruncate(fd, sizeof(roomInfo_shm));
+    ftruncate(fd1, sizeof(roomInfo_shm));
     // 把共享内存区映射到内存
     roomInfo = (roomInfo_shm *)mmap(NULL,
                                     sizeof(roomInfo_shm),
                                     PROT_READ | PROT_WRITE,
-                                    MAP_SHARED, fd, 0);
-    // 创建并打开信号量，该信号量被用于修改roomInfo时
-    roomSem = sem_open(ROOM_INFO_SEM, O_CREAT, 0644);
+                                    MAP_SHARED, fd1, 0);
+    // 用户预约信息的共享内存区
+    fd2 = shm_open(RESERVE_INFO_SHM, O_CREAT | O_RDWR, 0644);
+    ftruncate(fd2, sizeof(reserveInfo_shm));
+    reserveInfo = (reserveInfo_shm *)mmap(NULL,
+                                       sizeof(reserveInfo_shm),
+                                       PROT_READ | PROT_WRITE,
+                                       MAP_SHARED, fd2, 0);
+    // 创建并打开信号量
+    // 该信号量被用于修改roomInfo时
+    roomSem = sem_open(ROOM_INFO_SEM, O_CREAT, S_IRUSR | S_IWUSR, 1);
+    // 该信号量用于限制最大并法线程数
+    threadsSem = sem_open(THREAD_NUM_SEM, O_CREAT, S_IRUSR | S_IWUSR, MAX_NUM_THREAD);
 
     roomInfo_init(roomInfo);
-    // 打印房间信息
-    print_roomInfo();
+}
+
+void system_exit() {
+    shm_unlink(ROOM_INFO_SHM);
+    sem_unlink(ROOM_INFO_SEM);
+    sem_unlink(THREAD_NUM_SEM);
 }
 
 /**
- * @brief 打印房间信息（共享内存区）
+ * @brief 打印房间信息（共享内存区），房间信息结构体改变，函数弃用
  */
-void print_roomInfo() {
-    printf("------------------\n");
-    printf("| room_id | flag |\n");
-    for (int i = 0; i < total_room; i++) {
-        printf("| %7d | %4d |\n", roomInfo->room_id[i], roomInfo->flag[i]);
-    }
-    printf("------------------\n");
-}
+// void print_roomInfo() {
+//     printf("------------------\n");
+//     printf("| room_id | flag |\n");
+//     for (int i = 0; i < total_room; i++) {
+//         printf("| %7d | %4d |\n", roomInfo->room_id[i], roomInfo->flag[i]);
+//     }
+//     printf("------------------\n");
+// }
 
 /**
  * @brief 打印输入文件读取到变量中之后的内容，用于查看读取是否有误
@@ -201,7 +246,7 @@ void print_fileInput() {
         printf("%s", all_requests[i].name); // 读入的时候多了一个回车
         struct requestList *p = all_requests[i].listHead;
         while (p != NULL) {
-            printf("%s %d %d %d %d %d %d %s %d\n",
+            printf("%d %d %d %d %d %d %d %s %d\n",
                    p->ptr->command,
                    p->ptr->room_num,
                    p->ptr->room_id,

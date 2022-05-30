@@ -152,6 +152,33 @@ main.c.s:
 	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
+process.o: process.c.o
+
+.PHONY : process.o
+
+# target to build an object file
+process.c.o:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/process.c.o
+.PHONY : process.c.o
+
+process.i: process.c.i
+
+.PHONY : process.i
+
+# target to preprocess a source file
+process.c.i:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/process.c.i
+.PHONY : process.c.i
+
+process.s: process.c.s
+
+.PHONY : process.s
+
+# target to generate assembly for a file
+process.c.s:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/process.c.s
+.PHONY : process.c.s
+
 systemInit.o: systemInit.c.o
 
 .PHONY : systemInit.o
@@ -191,6 +218,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... process.o"
+	@echo "... process.i"
+	@echo "... process.s"
 	@echo "... systemInit.o"
 	@echo "... systemInit.i"
 	@echo "... systemInit.s"
