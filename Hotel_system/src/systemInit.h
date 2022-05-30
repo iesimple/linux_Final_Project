@@ -1,23 +1,23 @@
-
-#include <stdio.h>
-#include "common_types.h"
-
 #ifndef HOTEL_SYSTEM_SYSTEMINIT
-#define SYSTEMINIT
+#define HOTEL_SYSTEM_SYSTEMINIT
 
-#include <stdlib.h>
+extern roomInfo_shm *roomInfo;
 
-int total_room, total_customer;
-int room_id[MAX_NUM_ROOM];
-struct customerRequests all_requests[MAX_NUM_CUSTOM];
-
-struct request *requestParse(char *line, __ssize_t len);
-void fileReader();
-void room_init();
-void request_process();
-
+/*
+    对外接口函数
+*/
+void systemStart();
 /*测试用接口*/
 // 打印room_id, all_requests
-void print_file();
+void print_roomInfo();
+void print_fileInput();
+
+/*
+    内部函数
+*/
+// struct request *requestParse(char *line, __ssize_t len);
+// void fileReader(const char *filepath);
+// void roomInfo_init(roomInfo_shm *roomInfo);
+// void system_init();
 
 #endif

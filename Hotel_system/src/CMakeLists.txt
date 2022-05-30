@@ -1,6 +1,6 @@
 include_directories(../include)
 
-set(SOURCE_FILE main.c systemInit.h systemInit.c)
+set(SOURCE_FILE main.c systemInit.h systemInit.c process.h process.c)
 set(COMMON_HEADERS ../include/common_types.h)
 
 add_executable(main ${SOURCE_FILE} ${COMMON_HEADERS})

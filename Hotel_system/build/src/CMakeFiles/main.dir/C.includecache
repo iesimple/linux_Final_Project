@@ -8,6 +8,16 @@
 
 ../include/common_types.h
 
+../include/names.h
+
+/home/os/桌面/linux_Final_Project/Hotel_system/src/main.c
+stdio.h
+-
+string.h
+-
+systemInit.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+
 /home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.c
 systemInit.h
 /home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
@@ -23,4 +33,18 @@ common_types.h
 /home/os/桌面/linux_Final_Project/Hotel_system/src/common_types.h
 stdlib.h
 -
+fcntl.h
+-
+sys/mman.h
+-
+sys/types.h
+-
+memory.h
+-
+unistd.h
+-
+semaphore.h
+-
+names.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/names.h
 
