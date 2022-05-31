@@ -3,12 +3,10 @@
 
 #define MAX_NUM_THREAD 100 // 最大同时线程数，小于实际最大线程数，防止输入太多导致无法创建
 #define BUFF_SIZE 10
-#define MAX_LEN_NAME 25         // 客人名字的最大长度
-#define MAX_LEN_ONE_REQUEST 9   // 一条请求的最大长度
-#define MAX_NUM_ROOM 128        // 最大宾馆房间数
-#define MAX_NUM_CUSTOM 255      // 最大客人数
-#define FILE_PATH "./input.txt" // 调试用
-// #define FILE_PATH "../input.txt" // 输入文件
+#define MAX_LEN_NAME 25       // 客人名字的最大长度
+#define MAX_LEN_ONE_REQUEST 9 // 一条请求的最大长度
+#define MAX_NUM_ROOM 128      // 最大宾馆房间数
+#define MAX_NUM_CUSTOM 255    // 最大客人数
 
 /**
  * 读取输入用的结构体
@@ -73,24 +71,23 @@ typedef enum
 
 typedef struct
 {
-    int room_id;
-    bool day[2][13][32];
-    reserveRoomList *next;
-} reserveRoomList;
+    bool room_id[MAX_NUM_ROOM]; // 预约了房间号为i的房间则room_id[i]=true
+    bool flag[MAX_NUM_ROOM][2][13][32];
+} reserveRoom;
 
 // 存储所有用户所有预约信息
 typedef struct
 {
     char name[MAX_NUM_CUSTOM][MAX_LEN_NAME]; // 可能后续拿来作权限识别
-    reserveRoomList *head[MAX_NUM_CUSTOM];
-    reserveRoomList *tail[MAX_NUM_CUSTOM];
+    int customer_num;
+    reserveRoom Array[MAX_NUM_CUSTOM];
 } reserveInfo_shm;
 
 // 存储房间信息的共享内存区
 // 日期，年月日都按照最大开空间，另外设置函数判断日期是否合理
 typedef struct
 {
-    int room_id[MAX_NUM_ROOM]; // 房间号
+    bool room_id[MAX_NUM_ROOM]; // 房间号i存在则room_id[i]=true
     // 当前房间是否被预约
     // 2 - 2022 or 2023
     // 13 - 12个月，为了方便访问

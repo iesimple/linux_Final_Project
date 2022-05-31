@@ -22,11 +22,12 @@ struct customerRequest all_requests[MAX_NUM_CUSTOM];
     共享内存区、信号量有关变量
 */
 int fd1, fd2;
-sem_t *roomSem;
+
 // extern定义，全局变量
 roomInfo_shm *roomInfo = NULL;
 reserveInfo_shm *reserveInfo = NULL;
-sem_t *threadsSem = NULL;
+sem_t *roomSem;
+sem_t *processSem = NULL;
 
 // 客人名字到他的预约信息的索引缓冲区
 name_index_Buff buff[BUFF_SIZE];
@@ -154,6 +155,7 @@ void fileReader(const char *filepath) {
     while (length = getline(&line, &linecap, fp) != -1) {
         if (line[0] < 48)
             continue;
+        line[strlen(line) - 1] = 0;
         strcpy(all_requests[num].name, line); // 尾部会多一个回车
         while (length = getline(&line, &linecap, fp) != -1) {
             // printf("%s", line);
@@ -180,15 +182,17 @@ void fileReader(const char *filepath) {
  * @param roomInfo_shm* 存储房间信息的共享内存区
  */
 void roomInfo_init(roomInfo_shm *roomInfo) {
+    memset(roomInfo,0,sizeof(roomInfo)); // 共享内存区全部清零
     for (int i = 0; i < total_room; i++)
-        roomInfo->room_id[i] = room_id[i];
-    memset(roomInfo->flag, 0, sizeof(roomInfo->flag));
+        roomInfo->room_id[room_id[i]] = true;
 }
 
 /**
  * @brief 系统初始化
  */
 void system_init() {
+    shm_unlink(ROOM_INFO_SHM);
+    shm_unlink(RESERVE_INFO_SHM);
     // 创建并打开共享内存区
     fd1 = shm_open(ROOM_INFO_SHM, O_CREAT | O_RDWR, 0644);
     // 设置共享内存区大小
@@ -202,22 +206,28 @@ void system_init() {
     fd2 = shm_open(RESERVE_INFO_SHM, O_CREAT | O_RDWR, 0644);
     ftruncate(fd2, sizeof(reserveInfo_shm));
     reserveInfo = (reserveInfo_shm *)mmap(NULL,
-                                       sizeof(reserveInfo_shm),
-                                       PROT_READ | PROT_WRITE,
-                                       MAP_SHARED, fd2, 0);
+                                          sizeof(reserveInfo_shm),
+                                          PROT_READ | PROT_WRITE,
+                                          MAP_SHARED, fd2, 0);
+    memset(reserveInfo, 0, sizeof(reserveInfo));
+
+    sem_unlink(ROOM_INFO_SEM);
+    sem_unlink(PROCESS_NUM_SEM);
+
     // 创建并打开信号量
     // 该信号量被用于修改roomInfo时
     roomSem = sem_open(ROOM_INFO_SEM, O_CREAT, S_IRUSR | S_IWUSR, 1);
     // 该信号量用于限制最大并法线程数
-    threadsSem = sem_open(THREAD_NUM_SEM, O_CREAT, S_IRUSR | S_IWUSR, MAX_NUM_THREAD);
+    processSem = sem_open(PROCESS_NUM_SEM, O_CREAT, S_IRUSR | S_IWUSR, MAX_NUM_THREAD);
 
     roomInfo_init(roomInfo);
 }
 
 void system_exit() {
     shm_unlink(ROOM_INFO_SHM);
+    shm_unlink(RESERVE_INFO_SHM);
     sem_unlink(ROOM_INFO_SEM);
-    sem_unlink(THREAD_NUM_SEM);
+    sem_unlink(PROCESS_NUM_SEM);
 }
 
 /**
@@ -243,7 +253,7 @@ void print_fileInput() {
     printf("\n");
     // 客人请求信息
     for (int i = 0; i < total_customer; i++) {
-        printf("%s", all_requests[i].name); // 读入的时候多了一个回车
+        printf("%s\n", all_requests[i].name); // 读入的时候多了一个回车
         struct requestList *p = all_requests[i].listHead;
         while (p != NULL) {
             printf("%d %d %d %d %d %d %d %s %d\n",

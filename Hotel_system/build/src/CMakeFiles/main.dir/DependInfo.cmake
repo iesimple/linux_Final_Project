@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/os/桌面/linux_Final_Project/Hotel_system/src/isbadptr.c" "/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/main.dir/isbadptr.c.o"
   "/home/os/桌面/linux_Final_Project/Hotel_system/src/main.c" "/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/main.dir/main.c.o"
   "/home/os/桌面/linux_Final_Project/Hotel_system/src/process.c" "/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/main.dir/process.c.o"
   "/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.c" "/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/main.dir/systemInit.c.o"

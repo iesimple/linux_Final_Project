@@ -5,6 +5,7 @@
 #define HOTEL_SYSTEM_SYSTEMINIT
 
 extern roomInfo_shm *roomInfo;
+extern sem_t *roomSem;
 extern sem_t *threadsSem;
 
 /*

@@ -125,6 +125,33 @@ main/fast:
 	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+isbadptr.o: isbadptr.c.o
+
+.PHONY : isbadptr.o
+
+# target to build an object file
+isbadptr.c.o:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/isbadptr.c.o
+.PHONY : isbadptr.c.o
+
+isbadptr.i: isbadptr.c.i
+
+.PHONY : isbadptr.i
+
+# target to preprocess a source file
+isbadptr.c.i:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/isbadptr.c.i
+.PHONY : isbadptr.c.i
+
+isbadptr.s: isbadptr.c.s
+
+.PHONY : isbadptr.s
+
+# target to generate assembly for a file
+isbadptr.c.s:
+	cd /home/os/桌面/linux_Final_Project/Hotel_system/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/isbadptr.c.s
+.PHONY : isbadptr.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... isbadptr.o"
+	@echo "... isbadptr.i"
+	@echo "... isbadptr.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

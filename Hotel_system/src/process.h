@@ -5,7 +5,10 @@
 #define HOTEL_SYSTEM_PROCESS
 
 extern roomInfo_shm *roomInfo; // 声明共享内存区变量，函数中需要调用
-extern sem_t *threadsSem;
+extern reserveInfo_shm *reserveInfo;
+extern sem_t *roomSem;
+extern sem_t *processSem;
+
 
 /**
  * @brief 处理所有的请求

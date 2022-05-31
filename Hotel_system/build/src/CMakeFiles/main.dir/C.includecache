@@ -8,7 +8,7 @@
 
 ../include/common_types.h
 
-../include/names.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/isbadptr.h
 
 /home/os/桌面/linux_Final_Project/Hotel_system/src/process.c
 process.h
@@ -19,44 +19,22 @@ semaphore.h
 -
 stdio.h
 -
-unistd.h
--
-
-/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
-common_types.h
--
-semaphore.h
--
-
-/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.c
-systemInit.h
-/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
-stdio.h
--
-string.h
--
 stdlib.h
 -
-fcntl.h
--
-sys/mman.h
+unistd.h
 -
 sys/types.h
 -
-memory.h
+sys/wait.h
 -
-unistd.h
+string.h
 -
-semaphore.h
--
-process.h
-/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
-names.h
--
+isbadptr.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/isbadptr.h
 common_types.h
 -
 
-/home/os/桌面/linux_Final_Project/Hotel_system/src/systemInit.h
+/home/os/桌面/linux_Final_Project/Hotel_system/src/process.h
 common_types.h
 -
 semaphore.h
