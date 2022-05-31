@@ -38,6 +38,8 @@ check 0 0 0 0 0 0 sadasd 3
 
 ```
 
+5.31 reserve & cancel代码编写测试
+
 ## Q&A
 
 1. 裂开，搞错了线程和进程
