@@ -38,7 +38,12 @@ check 0 0 0 0 0 0 sadasd 3
 
 ```
 
-5.31 reserve & cancel代码编写测试
+5.31 reserve & cancel & check代码编写测试
+
+## 待办事项
+
+- reserveblock cancelblock reserverany cancelany
+- 搜索优化
 
 ## Q&A
 
