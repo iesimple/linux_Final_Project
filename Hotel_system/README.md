@@ -1,6 +1,6 @@
 # 代码编写记录
 
-## quick start
+## Quick Start
 
 ```shell
 mkdir build
