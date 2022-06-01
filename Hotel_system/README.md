@@ -40,9 +40,15 @@ check 0 0 0 0 0 0 sadasd 3
 
 5.31 reserve & cancel & check代码编写测试
 
+6.1 reserveblock & cancelblock代码编写测试
+
+vscode源代码管理连接不上远程，重启一下就好...弄了半天不知道咋回事...
+
 ## 待办事项
 
-- reserveblock cancelblock reserverany cancelany
+- reserverany cancelany
+- 代码结构/逻辑优化
+  感觉代码有点乱，有时间整理一下
 - 搜索优化
 
 ## Q&A
