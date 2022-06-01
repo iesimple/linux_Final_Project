@@ -1,5 +1,17 @@
 # 代码编写记录
 
+## quick start
+
+```shell
+mkdir build
+cd build
+cmake ..
+make
+cd ../bin
+# 需要一个输入文件input.txt
+./main
+```
+
 ## LOG
 
 5.29 文件输入的代码编写以及测试
