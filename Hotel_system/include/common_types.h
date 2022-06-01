@@ -88,7 +88,7 @@ typedef struct
 typedef struct
 {
     bool room_id[MAX_NUM_ROOM]; // 房间号i存在则room_id[i]=true
-    // 当前房间是否被预约
+    // flag[i][j][k][l] - 房间i在j-k-l这一天是否被预约
     // 2 - 2022 or 2023
     // 13 - 12个月，为了方便访问
     // 32 - 31天，为了方便访问

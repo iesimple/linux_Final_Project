@@ -19,26 +19,16 @@
 23
 24
 25
-2
+1
 cutstomer1
 reserve 10 2022 3 5 10 kas 1
+reserve 12 2022 3 5 2 kas 1
+reserve 13 2022 3 5 2 kas 1
 check kas 1
-reserve 10 2022 4 5 1 ds 1
-cancel 10 2023 10 2 5 kas 1
-cancel 10 2022 3 5 5 kas 1
-check kas 2
-reserveblock 2 1 2022 3 6 4 asd 1
-reserveblock 2 1 2022 3 6 4 asd 1
-cancelblock 2 1 2022 3 5 3 sacs 1
-reserveany 1 2022 3 5 5 assad 1
-cancelany 1 2022 4 5 10 asd 1
-check sadasd 1
-end
-cutstomer2
-reserve 10 2022 3 5 10 kfd 1
+cancel 10 2022 3 5 9 kas 1
 check kas 1
-reserve 10 2022 4 5 1 ds 1
-cancel 10 2023 10 2 5 kfd 1
-cancel 10 2022 3 5 5 kfd 1
-check kfd 2
+reserveblock 4 3 2022 3 5 10 kas 1
+check kas 1
+cancelblock 2 3 2022 3 5 5 kas 1
+check kas 1
 end

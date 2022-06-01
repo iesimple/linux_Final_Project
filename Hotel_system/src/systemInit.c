@@ -96,10 +96,12 @@ struct request *requestParse(char *line, __ssize_t len) {
             if (i == 0) {
                 if (strcmp(cmd, "reserve") == 0) {
                     tmp->command = RESERVE;
+                    *(ptr + i) = 1;
                     i++;
                     continue;
                 } else if (strcmp(cmd, "cancel") == 0) {
                     tmp->command = CANCEL;
+                    *(ptr + i) = 1;
                     i++;
                     continue;
                 } else if (strcmp(cmd, "reserveblock") == 0)
@@ -182,7 +184,7 @@ void fileReader(const char *filepath) {
  * @param roomInfo_shm* 存储房间信息的共享内存区
  */
 void roomInfo_init(roomInfo_shm *roomInfo) {
-    memset(roomInfo,0,sizeof(roomInfo)); // 共享内存区全部清零
+    memset(roomInfo, 0, sizeof(roomInfo)); // 共享内存区全部清零
     for (int i = 0; i < total_room; i++)
         roomInfo->room_id[room_id[i]] = true;
 }

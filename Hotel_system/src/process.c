@@ -23,22 +23,24 @@ void print_request(struct customerRequest *cusrqt);
 */
 // void reserve(struct request *rqt);
 // void cancel(struct request *rqt);
-void rsv_ccl(struct request *rqt);
-void reserveblock(struct request *rqt);
-void cancelblock(struct request *rqt);
-void reserveany(struct request *rqt);
-void cancelany(struct request *rqt);
-void check(struct request *rqt);
+void rsv_ccl(const struct request *rqt);
+void reserveblock(const struct request *rqt);
+void cancelblock(const struct request *rqt);
+void reserveany(const struct request *rqt);
+void cancelany(const struct request *rqt);
+void check(const struct request *rqt);
 
 /*
     执行上面的处理函数时借助的函数
 */
-int find_index(char *name);
-void print_reserveInfo(reserveRoom *rrinfo);
-bool isavailable(struct request *rqt, int index);
+int find_index(const char *name);
+void print_reserveInfo(int index);
+bool isavailable(const struct request *rqt, int index);
+bool isexit(int room_id);
 void next_day(int *year, int *month, int *day);
-void alter_roomInfo(struct request *rqt);
-void alter_reserveInfo(struct request *rqt, int index);
+int *get_room_ids(int room_id, int num);
+void alter_roomInfo(const struct request *rqt);
+void alter_reserveInfo(const struct request *rqt, int index);
 
 /* 合法request
  **************************************************************
@@ -70,6 +72,7 @@ void rqt_process(struct request *rqt) {
            rqt->day,
            rqt->reserve_days,
            rqt->name);
+
     /*
         临界区，这里也可以用锁机制实现
     */
@@ -186,9 +189,14 @@ void request_process(struct customerRequest *all_requests, int n) {
  * @param rqt 请求
  * @param flag reserve:=false, cancel:=true
  */
-void rsv_ccl(struct request *rqt) {
+void rsv_ccl(const struct request *rqt) {
+    if (!isexit(rqt->room_id)) {
+        printf("roomid is not exit!\n");
+        return;
+    }
     int index = find_index(rqt->name);
     if (!isavailable(rqt, index)) {
+        // room不可用
         printf("Your request is not available!\n");
         return;
     }
@@ -198,18 +206,69 @@ void rsv_ccl(struct request *rqt) {
     alter_reserveInfo(rqt, index);
 }
 
-void reserveblock(struct request *rqt) {
+void reserveblock(const struct request *rqt) {
+    if (!isexit(rqt->room_id)) {
+        printf("roomid is not exit!\n");
+        return;
+    }
+    struct request tmp = *rqt; // 创建一个临时变量，拷贝rqt的值
+    tmp.command = RESERVE;
+    // 循环判断所有申请的房间是否可用
+    int *ids = get_room_ids(rqt->room_id, rqt->room_num);
+    for (int i = 0; i < rqt->room_num; i++) {
+        if (!isavailable(&tmp, -1)) {
+            printf("Your request is not available!\n");
+            return;
+        }
+        tmp.room_id = ids[i + 1];
+    }
+    // 更新共享内存区
+    int index = find_index(tmp.name);
+    for (int i = 0; i < rqt->room_num; i++) {
+        tmp.room_id = ids[i];
+        alter_roomInfo(&tmp);
+        if (index == -1) // 如果rqt是一个reserve请求但是共享内存区中没有该客人的记录
+            index = reserveInfo->customer_num++;
+        alter_reserveInfo(&tmp, index);
+    }
 }
-void cancelblock(struct request *rqt) {
+
+void cancelblock(const struct request *rqt) {
+    if (!isexit(rqt->room_id)) {
+        printf("roomid is not exit!\n");
+        return;
+    }
+    struct request tmp = *rqt; // 创建一个临时变量，拷贝rqt的值
+    tmp.command = CANCEL;
+    // 循环判断所有申请的房间是否可用
+    int *ids = get_room_ids(rqt->room_id, rqt->room_num);
+    int index = find_index(rqt->name);
+    if (index == -1) {
+        printf("Your request is not available!\n");
+        return;
+    }
+    for (int i = 0; i < rqt->room_num; i++) {
+        if (!isavailable(&tmp, index)) {
+            printf("Your request is not available!\n");
+            return;
+        }
+        tmp.room_id = ids[i + 1];
+    }
+    // 更新共享内存区
+    for (int i = 0; i < rqt->room_num; i++) {
+        tmp.room_id = ids[i];
+        alter_roomInfo(&tmp);
+        alter_reserveInfo(&tmp, index);
+    }
 }
-void reserveany(struct request *rqt) {
+void reserveany(const struct request *rqt) {
 }
-void cancelany(struct request *rqt) {
+void cancelany(const struct request *rqt) {
 }
-void check(struct request *rqt) {
+void check(const struct request *rqt) {
     int index = find_index(rqt->name);
     if (index != -1) {
-        print_reserveInfo(&reserveInfo->Array[index]);
+        print_reserveInfo(index);
     } else {
         // printf("%s", reserveInfo->name[0]);
         printf("%s have no reserve information.\n", rqt->name);
@@ -247,6 +306,30 @@ void next_day(int *year, int *month, int *day) {
     }
 }
 
+bool isexit(int room_id) {
+    if (!roomInfo->room_id[room_id])
+        return false;
+    return true;
+}
+
+/**
+ * @brief 返回所申请的所有房间号，因为房间号可能是不连续的
+ *
+ * @param room_id 起始房间号
+ * @param num 房间数
+ * @return true 所申请的所有房间都是存在的
+ * @return false
+ */
+int *get_room_ids(int room_id, int num) {
+    int *ids = (int *)malloc(sizeof(int));
+    for (int i = 0; i < num; i++) {
+        while (!roomInfo->room_id[room_id])
+            room_id++;
+        ids[i] = room_id;
+    }
+    return ids;
+}
+
 /**
  * @brief 查看希望预约的房间以及日期是否可用
  *
@@ -258,7 +341,7 @@ void next_day(int *year, int *month, int *day) {
  * @return true 房间可用
  * @return false 房间不可用
  */
-bool isavailable(struct request *rqt, int index) {
+bool isavailable(const struct request *rqt, int index) {
     int reserve_days = rqt->reserve_days;
     int date[3] = {rqt->year - 2022, rqt->month, rqt->day};
     if (!rqt->command) // reserve请求，因此查找roomInfo
@@ -271,7 +354,7 @@ bool isavailable(struct request *rqt, int index) {
         }
     } else if (index == -1) // cancel请求，但是没有给合法的index，直接返回false
     {
-        printf("%s have no reserve information.\n", rqt->name);
+        // printf("%s have no reserve information.\n", rqt->name);
         return false;
     } else // 查找reserveInfo
     {
@@ -325,9 +408,9 @@ bool isavailable(struct request *rqt, int index) {
  *
  * @param rqt 请求
  */
-void alter_roomInfo(struct request *rqt) {
+void alter_roomInfo(const struct request *rqt) {
     int date[3] = {rqt->year - 2022, rqt->month, rqt->day};
-    for (int i = 0; i < rqt->reserve_days; i++) {
+    for (int j = 0; j < rqt->reserve_days; j++) {
         roomInfo->flag[rqt->room_id][date[0]][date[1]][date[2]] = !rqt->command;
         next_day(date, date + 1, date + 2);
     }
@@ -339,10 +422,9 @@ void alter_roomInfo(struct request *rqt) {
  * @param rqt 请求
  * @param index name对应在reserveInfo->Array中的索引
  */
-void alter_reserveInfo(struct request *rqt, int index) {
+void alter_reserveInfo(const struct request *rqt, int index) {
     if (index == -1)
         printf("index error!");
-    // 修改reserveInfo中是否被预约的信息
     strcpy(reserveInfo->name[index], rqt->name);
     int date[3] = {rqt->year - 2022, rqt->month, rqt->day};
     for (int i = 0; i < rqt->reserve_days; i++) {
@@ -357,7 +439,7 @@ void alter_reserveInfo(struct request *rqt, int index) {
  * @param name 客人名字
  * @return int 索引
  */
-int find_index(char *name) {
+int find_index(const char *name) {
     int index = -1;
     for (int i = 0; i < reserveInfo->customer_num; i++) {
         if (strcmp(reserveInfo->name[i], name) == 0) {
@@ -373,16 +455,18 @@ int find_index(char *name) {
  *
  * @param index
  */
-void print_reserveInfo(reserveRoom *rrinfo) {
+void print_reserveInfo(int index) {
     printf("-------------------------\n");
     printf("| room_id |     date     |\n");
-    for (int i = 0; i < MAX_NUM_ROOM; i++) {
+    for (int i = 1; i < MAX_NUM_ROOM; i++) {
         // if (!rrinfo->room_id[i])
         //     break;
+        if (!roomInfo->room_id[i]) // 不存在的房间号
+            continue;
         for (int j = 0; j < 2; j++)          // 年
             for (int k = 1; k < 13; k++)     // 月
                 for (int l = 1; l < 32; l++) // 日
-                    if (rrinfo->flag[i][j][k][l]) {
+                    if (reserveInfo->Array[index].flag[i][j][k][l]) {
                         printf("| %5d   |  %4d %2d %2d  |\n", i, j + 2022, k, l);
                     }
     }
