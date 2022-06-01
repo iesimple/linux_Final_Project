@@ -1,5 +1,0 @@
-/home/os/桌面/linux_Final_Project/Hotel_system/build/CMakeFiles/rebuild_cache.dir
-/home/os/桌面/linux_Final_Project/Hotel_system/build/CMakeFiles/edit_cache.dir
-/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/rebuild_cache.dir
-/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/edit_cache.dir
-/home/os/桌面/linux_Final_Project/Hotel_system/build/src/CMakeFiles/main.dir
