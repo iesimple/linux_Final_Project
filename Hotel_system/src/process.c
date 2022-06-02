@@ -18,9 +18,7 @@ void rqt_process(struct request *rqt);
 void *process(struct customerRequest *cusrqt);
 void print_request(struct customerRequest *cusrqt);
 
-/*
-    对于某个具体请求的处理函数，函数所需数据通过访问共享内存区得到
-*/
+// 对于某个具体请求的处理函数，函数所需数据通过访问共享内存区得到
 // void reserve(struct request *rqt);
 // void cancel(struct request *rqt);
 void rsv_ccl(const struct request *rqt);
@@ -30,9 +28,7 @@ void reserveany(const struct request *rqt);
 void cancelany(const struct request *rqt);
 void check(const struct request *rqt);
 
-/*
-    执行上面的处理函数时借助的函数
-*/
+// 执行上面的处理函数时借助的函数
 int find_index(const char *name);
 void print_reserveInfo(int index);
 bool isavailable(const struct request *rqt, int index);
@@ -261,9 +257,70 @@ void cancelblock(const struct request *rqt) {
         alter_reserveInfo(&tmp, index);
     }
 }
+
+/**
+ * @brief 给出预约房间数、预约时间和预约天数，预约房间号由系统分配
+ *
+ * @param rqt {reserveany 房间数 年 月 日 预约天数 预约姓名 time}
+ */
 void reserveany(const struct request *rqt) {
+    int j = 1;              // j
+    int ids[rqt->room_num]; // 如果可以找到请求所需的房间，那么ids存储这些房间号
+    struct request tmp = *rqt;
+    tmp.command = RESERVE;
+    for (int i = 0; i < rqt->room_num; i++) // 找到room_num间可用房间
+    {
+        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j]; j++) // 遍历所有存在的房间号
+        {
+            tmp.room_id = j;
+            if (isavailable(&tmp, -1)) {
+                ids[i] = j++;
+                break;
+            } else {
+                printf("Your request is not available!\n");
+                return;
+            }
+        }
+    }
+    int index = find_index(rqt->name);
+    if (index == -1) // 如果rqt是一个reserve请求但是共享内存区中没有该客人的记录
+        index = reserveInfo->customer_num++;
+    for (int i = 0; i < rqt->room_num; i++) {
+        tmp.room_id = ids[i];
+        alter_roomInfo(&tmp);
+        alter_reserveInfo(&tmp, index);
+    }
 }
 void cancelany(const struct request *rqt) {
+    int index = find_index(rqt->name);
+    if (index == -1) {
+        printf("Your request is not available!\n");
+        return;
+    }
+    int j = 1;              // j
+    int ids[rqt->room_num]; // 如果可以找到请求所需的房间，那么ids存储这些房间号
+    struct request tmp = *rqt;
+    tmp.command = CANCEL;
+    for (int i = 0; i < rqt->room_num; i++) // 找到room_num间可以取消的房间
+    {
+        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j]; j++) // 遍历所有存在的房间号
+        {
+            tmp.room_id = j;
+            if (isavailable(&tmp, index)) {
+                ids[i] = j++;
+                break;
+            } else {
+                printf("Your request is not available!\n");
+                return;
+            }
+        }
+    }
+
+    for (int i = 0; i < rqt->room_num; i++) {
+        tmp.room_id = ids[i];
+        alter_roomInfo(&tmp);
+        alter_reserveInfo(&tmp, index);
+    }
 }
 void check(const struct request *rqt) {
     int index = find_index(rqt->name);

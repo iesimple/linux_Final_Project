@@ -44,9 +44,12 @@ check 0 0 0 0 0 0 sadasd 3
 
 vscode源代码管理连接不上远程，重启一下就好...弄了半天不知道咋回事...
 
+6.2 reserverany cancelany
+
+基本实现已经全部完成啦！
+
 ## 待办事项
 
-- reserverany cancelany
 - 代码结构/逻辑优化
   感觉代码有点乱，有时间整理一下
 - 搜索优化
