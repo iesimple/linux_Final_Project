@@ -22,7 +22,7 @@ cd ../bin
 
 vscode源代码管理连接不上远程，重启一下就好...弄了半天不知道咋回事...
 
-6.2 reserverany cancelany
+6.2 reserverany cancelany代码编写测试
 
 基本实现已经全部完成啦！
 
