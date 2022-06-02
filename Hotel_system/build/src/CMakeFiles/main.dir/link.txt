@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/main.dir/main.c.o CMakeFiles/main.dir/systemInit.c.o CMakeFiles/main.dir/process.c.o CMakeFiles/main.dir/isbadptr.c.o  -o ../../bin/main  -lrt -lpthread 
