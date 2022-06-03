@@ -1,7 +1,7 @@
 #ifndef HOTEL_SYSTEM_COMMON_TYPES_H
 #define HOTEL_SYSTEM_COMMON_TYPES_H
 
-#define MAX_NUM_THREAD 100 // 最大同时线程数，小于实际最大线程数，防止输入太多导致无法创建
+#define MAX_NUM_THREAD 100 // 最大同时进程数，小于实际最大线程数，防止输入太多导致无法创建
 #define BUFF_SIZE 10
 #define MAX_LEN_NAME 25       // 客人名字的最大长度
 #define MAX_LEN_ONE_REQUEST 9 // 一条请求的最大长度

@@ -268,18 +268,23 @@ void reserveany(const struct request *rqt) {
     int ids[rqt->room_num]; // 如果可以找到请求所需的房间，那么ids存储这些房间号
     struct request tmp = *rqt;
     tmp.command = RESERVE;
-    for (int i = 0; i < rqt->room_num; i++) // 找到room_num间可用房间
+    for (int i = 0; i < rqt->room_num;) // 找到room_num间可用房间
     {
-        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j]; j++) // 遍历所有存在的房间号
+        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j];) // 遍历所有存在的房间号
         {
             tmp.room_id = j;
             if (isavailable(&tmp, -1)) {
-                ids[i] = j++;
+                ids[i++] = j;
                 break;
             } else {
                 printf("Your request is not available!\n");
                 return;
             }
+        }
+        j++;
+        if (j == MAX_NUM_ROOM) {
+            printf("Your request is not available!\n");
+            return;
         }
     }
     int index = find_index(rqt->name);
@@ -301,18 +306,23 @@ void cancelany(const struct request *rqt) {
     int ids[rqt->room_num]; // 如果可以找到请求所需的房间，那么ids存储这些房间号
     struct request tmp = *rqt;
     tmp.command = CANCEL;
-    for (int i = 0; i < rqt->room_num; i++) // 找到room_num间可以取消的房间
+    for (int i = 0; i < rqt->room_num;) // 找到room_num间可以取消的房间
     {
-        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j]; j++) // 遍历所有存在的房间号
+        for (; j < MAX_NUM_ROOM && roomInfo->room_id[j];) // 遍历所有存在的房间号
         {
             tmp.room_id = j;
             if (isavailable(&tmp, index)) {
-                ids[i] = j++;
+                ids[i++] = j;
                 break;
             } else {
                 printf("Your request is not available!\n");
                 return;
             }
+        }
+        j++;
+        if (j == MAX_NUM_ROOM) {
+            printf("Your request is not available!\n");
+            return;
         }
     }
 
@@ -357,8 +367,10 @@ void next_day(int *year, int *month, int *day) {
                 *year = *year + 1;
                 *month = 1;
                 *day = 1;
-            } else
+            } else {
                 printf("Date is illegal!\n");
+                return;
+            }
         }
     }
 }

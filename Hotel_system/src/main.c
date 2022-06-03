@@ -17,7 +17,7 @@
  * @param filepath 输入文件的路径，如果为NULL则是默认路径 "./input.txt"
  */
 void systemRun(const char *filepath) {
-    systemStart(NULL);
+    systemStart(filepath);
 }
 
 int main(int argc, char **argv) {
