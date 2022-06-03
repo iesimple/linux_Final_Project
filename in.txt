@@ -1,0 +1,43 @@
+10
+1
+2
+3
+4
+6
+7
+8
+9
+10
+11
+4
+customer0
+reserve 11 2023 8 10 6 customer0 2
+reserveblock 1 10 2023 6 13 6 customer0 5
+end
+customer1
+reserveblock 1 7 2023 7 1 2 customer1 3
+reserveblock 1 6 2023 4 19 7 customer1 4
+reserveblock 1 7 2022 5 4 5 customer1 1
+reserveblock 1 2 2022 2 2 4 customer1 2
+cancelblock 1 7 2023 7 1 2 customer1 2
+check customer1 1
+check customer1 1
+reserveblock 1 10 2023 10 31 5 customer1 2
+end
+customer2
+reserve 5 2023 7 13 8 customer2 2
+reserveany 1 2022 5 1 6 customer2 2
+reserveblock 1 7 2022 11 29 6 customer2 2
+cancelblock 1 10 2023 10 31 1 customer2 4
+cancel 10 2023 10 31 1 customer2 1
+cancel 10 2023 10 31 1 customer2 4
+check customer2 2
+reserveblock 1 9 2023 7 5 7 customer2 4
+cancel 7 2023 7 1 2 customer2 1
+check customer2 5
+end
+customer2
+reserveblock 1 8 2022 7 7 2 customer2 3
+reserveany 1 2023 7 18 10 customer2 5
+reserveany 1 2023 2 18 5 customer2 4
+end

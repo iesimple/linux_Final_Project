@@ -163,7 +163,7 @@ class FileGenerate():
                 request.extend([year, month, day, reserve_days])
         # sleep函数的输入要求是秒
         if self.customer_n < 10:
-            request.append(random.ranint(1, 5))  # 操作时间
+            request.append(random.randint(1, 5))  # 操作时间
         else:
             request.append(0)  # 在顾客数量多的时候，操作时间设置会影响测试时间
         return request
