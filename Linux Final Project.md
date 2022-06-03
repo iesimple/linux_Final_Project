@@ -38,7 +38,7 @@ c语言编写，主要依靠linux下的多进程编程，使用共享内存区�
 
 ### 测试文件结果及说明
 
-默认路径下的测试文件为./bin/input_test.txt
+默认路径下的测试文件为./resource/in_little.txt
 
 #### 结果
 
