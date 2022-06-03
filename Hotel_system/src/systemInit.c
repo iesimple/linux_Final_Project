@@ -65,22 +65,25 @@ void systemStart(const char *filepath) {
 }
 
 void print_stat() {
-    printf("-------------------------\n");
-    printf("|     date     | room_id |\n");
+    printf("--------------------------------\n");
+    printf("|     date     | customer_name |\n");
     for (int index = 0; index < reserveInfo->customer_num; index++) {
-        printf("        %s        \n", reserveInfo->name[index]);
-        for (int j = 0; j < 2; j++)          // 年
-            for (int k = 1; k < 13; k++)     // 月
-                for (int l = 1; l < 32; l++) // 日
-                    for (int i = 1; i < MAX_NUM_ROOM; i++) {
-                        if (!roomInfo->room_id[i]) // 不存在的房间号
-                            continue;
-                        if (reserveInfo->Array[index].flag[i][j][k][l]) {
-                            printf("|  %4d %2d %2d  | %5d   |\n", j + 2022, k, l, i);
+        for (int i = 1; i < MAX_NUM_ROOM; i++) {
+            if (!roomInfo->room_id[i]) // 不存在的房间号
+                continue;
+            printf("        room %d        \n", i);
+            for (int j = 0; j < 2; j++)          // 年
+                for (int k = 1; k < 13; k++)     // 月
+                    for (int l = 1; l < 32; l++) // 日
+                    {
+                        if (roomInfo->flag[i][j][k][l]) {
+                            printf("|  %4d %2d %2d  | %13s |\n", j + 2022, k, l, roomInfo->name[i][j][k][l]);
                         }
                     }
+        }
     }
-    printf("-------------------------\n");
+
+    printf("-------------------------------\n");
 }
 
 /* 合法request

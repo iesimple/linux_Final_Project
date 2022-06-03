@@ -481,6 +481,8 @@ void alter_roomInfo(const struct request *rqt) {
     int date[3] = {rqt->year - 2022, rqt->month, rqt->day};
     for (int j = 0; j < rqt->reserve_days; j++) {
         roomInfo->flag[rqt->room_id][date[0]][date[1]][date[2]] = !rqt->command;
+        if (!rqt->command)
+            strcpy(roomInfo->name[rqt->room_id][date[0]][date[1]][date[2]], rqt->name);
         next_day(date, date + 1, date + 2);
     }
 }

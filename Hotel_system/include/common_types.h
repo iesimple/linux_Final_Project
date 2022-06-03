@@ -93,6 +93,7 @@ typedef struct
     // 13 - 12个月，为了方便访问
     // 32 - 31天，为了方便访问
     bool flag[MAX_NUM_ROOM][2][13][32];
+    char name[MAX_NUM_ROOM][2][13][32][MAX_LEN_NAME];
 } roomInfo_shm;
 
 #endif
