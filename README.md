@@ -8,8 +8,7 @@ cd build
 cmake ..
 make
 cd ../bin
-# 需要一个输入文件input.txt
-./main
+./main [-f <filepath>]    #filepath指定输入文件路径，没有的话会使用默认路径
 ```
 
 ## LOG
