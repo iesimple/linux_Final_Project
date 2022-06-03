@@ -1,20 +1,59 @@
 # Linux Final Project
 
-## 实验目的
+## 一、实验目的
 
 实现一个Linux下的多进程并发程序以模拟某个宾馆的预约系统运作情况
 
-## 实验方法
+## 二、实验方法
 
 啊
 
-## 程序框架说明
+## 三、程序框架说明
 
 ![程序框架](./img/%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6.png)
 
-## 实验体会
 
-## 问题及解决
+
+## 四、代码运行测试
+
+### Quick Start
+
+- ./bin目录下有编译完成可以直接运行的二进制文件main
+
+  ```shell
+  ./main [-f <filepath>]
+  ```
+
+- 从头开始
+
+  ```shell
+  mkdir build
+  cd build
+  cmake ..
+  make
+  cd ../bin
+  ./main [-f <filepath>]
+  ```
+
+### 测试文件结果及说明
+
+默认路径下的测试文件为./bin/input_test.txt
+
+#### 结果
+
+```shell
+
+```
+
+### 测试文件自动生成脚本说明
+
+./src/input_generate.py
+
+参照项目说明文档要求编写
+
+## 五、实验体会
+
+## 六、问题及解决
 
 1. 在使用有名信号量时，最好在sem_open前提前sem_unlink，这是因为在调试的时候，如果某次程序中间出错，没有执行到最后的sem_unlink，文件系统中会存在该name的文件，同时又很不巧地是，在sem_open的oflags参数设置为O_CREAT | O_EXCL，导致打不开已经创建的信号量，在没有设置出错处理函数的时候，很难发现问题所在。
 
