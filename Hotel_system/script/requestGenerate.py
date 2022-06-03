@@ -62,6 +62,8 @@ class FileGenerate():
         fp.write(s + '\n')
 
     def _writeTofile(self):
+        """生成结果写入文件
+        """
         with open(self.filepath, 'w') as fp:
             self._write_endl(fp, str(self.room_n))  # room_num
             for id in self.ids:  # room_ids
@@ -74,6 +76,14 @@ class FileGenerate():
                 self._write_endl(fp, customer_request[-1])  # end
 
     def _requestList_gen(self, name):
+        """一位顾客请求序列生成
+
+        Args:
+            name (string): 顾客姓名
+
+        Returns:
+            list: 每个元素都是个请求
+        """
         requestList = []
         len = random.randint(1, 10)
         for i in range(len):
@@ -83,6 +93,7 @@ class FileGenerate():
         return requestList
 
     def _request_gen(self, i, rsvList=[]):
+        """"""
         if i < 2:  # 保证前三个请求都是reserve类型的，主要是防止无意义的请求太多
             command = random.choice(self.commandList[0:3])
         else:
@@ -90,17 +101,26 @@ class FileGenerate():
         rsvList.append(self._parse_gen(command, rsvList))
         return rsvList[-1]
 
-    """
-    reserve 房间号 年 月 日 预约天数 预约姓名 操作时间
-    cancel 房间号 年 月 日 预约天数 预约姓名 操作时间
-    reserveblock 房间数 第一个房间号 年 月 日 预约天数 预约姓名 操作时间
-    cancelblock 房间数 第一个房间号 年 月 日 预约天数 预约姓名 操作时间
-    reserveany 房间数 年 月 日 预约天数 预约姓名 操作时间
-    cancelany 房间数 年 月 日 预约天数 预约姓名 操作时间
-    check 预约姓名 操作时间
-    """
+    # """
+    # reserve 房间号 年 月 日 预约天数 预约姓名 操作时间
+    # cancel 房间号 年 月 日 预约天数 预约姓名 操作时间
+    # reserveblock 房间数 第一个房间号 年 月 日 预约天数 预约姓名 操作时间
+    # cancelblock 房间数 第一个房间号 年 月 日 预约天数 预约姓名 操作时间
+    # reserveany 房间数 年 月 日 预约天数 预约姓名 操作时间
+    # cancelany 房间数 年 月 日 预约天数 预约姓名 操作时间
+    # check 预约姓名 操作时间
+    # """
 
     def _parse_gen(self, command, rsvList):
+        """分析command类型生成符合规则的请求
+
+        Args:
+            command (string): 请求的第一个字符串
+            rsvList (list): 暂存该顾客之前的请求
+
+        Returns:
+            list: 一条请求
+        """
         days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         request = [
             command,
