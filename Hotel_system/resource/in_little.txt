@@ -1,0 +1,33 @@
+10
+1
+2
+3
+4
+6
+7
+8
+9
+10
+11
+3
+customer0
+reserve 11 2023 8 10 2 customer0 2
+reserveblock 2 10 2023 6 13 2 customer0 2
+check customer0 1
+end
+customer1
+reserveblock 2 7 2023 7 1 2 customer1 3
+check customer1 1
+reserve 11 2023 8 10 2 customer1 2
+cancelblock 1 7 2023 7 1 2 customer1 2
+check customer1 1
+end
+customer2
+reserveany 2 2022 5 1 1 customer2 2
+reserveblock 2 7 2022 11 29 4 customer2 2
+cancel 7 2022 11 29 2 customer2 1
+cancel 7 2022 11 29 1 customer2 4
+check customer2 2
+cancel 7 2022 12 1 1 customer2 1
+check customer2 1
+end
