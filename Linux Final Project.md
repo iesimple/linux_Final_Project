@@ -38,11 +38,13 @@ c语言编写，主要依靠linux下的多进程编程，使用共享内存区�
 
 ### 测试文件结果及说明
 
-默认路径下的测试文件为./bin/input_test.txt
+默认路径下的测试文件为./resource/in_little.txt
 
 #### 结果
 
-**提前说明：**形如 ”reserveany room_num=2 room_id=0 2022-5-1 reserve_days=1 name=customer2“ 只是把请求打印，方便解释；除此之外，不同类型的请求某些值可能是没有的，比如check只有name，没有的值统一为0，输出的时候输出全部，因此可以看到挺多0；每一行最后的#后面是说明文字，原始输出是没有的。
+pdf显示效果不好，可以到https://github.com/iesimple/linux_Final_Project/blob/master/Linux%20Final%20Project.md
+
+**提前说明：** 形如 ”reserveany room_num=2 room_id=0 2022-5-1 reserve_days=1 name=customer2“ 只是把请求打印，方便解释；除此之外，不同类型的请求某些值可能是没有的，比如check只有name，没有的值统一为0，输出的时候输出全部，因此可以看到挺多0；每一行最后的#后面是说明文字，原始输出是没有的。
 
 ```shell
 reserve       room_num=1   room_id=11  2023- 8-10 reserve_days=2  name=customer0#1.2预约了两间房，23-5-1 2天
