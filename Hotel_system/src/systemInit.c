@@ -38,6 +38,7 @@ struct request *requestParse(char *line, __ssize_t len);
 void fileReader(const char *filepath);
 void roomInfo_init(roomInfo_shm *roomInfo);
 void system_init();
+void print_stat();
 void system_exit();
 
 /**
@@ -53,12 +54,33 @@ void systemStart(const char *filepath) {
     // 请求处理开始
     request_process(all_requests, total_customer);
 
+    print_stat();
+
     // 退出程序，释放相关资源
     system_exit();
     /*
         测试用，打印所有的输入信息
     */
     // print_fileInput();
+}
+
+void print_stat() {
+    printf("-------------------------\n");
+    printf("|     date     | room_id |\n");
+    for (int index = 0; index < reserveInfo->customer_num; index++) {
+        printf("        %s        \n", reserveInfo->name[index]);
+        for (int j = 0; j < 2; j++)          // 年
+            for (int k = 1; k < 13; k++)     // 月
+                for (int l = 1; l < 32; l++) // 日
+                    for (int i = 1; i < MAX_NUM_ROOM; i++) {
+                        if (!roomInfo->room_id[i]) // 不存在的房间号
+                            continue;
+                        if (reserveInfo->Array[index].flag[i][j][k][l]) {
+                            printf("|  %4d %2d %2d  | %5d   |\n", j + 2022, k, l, i);
+                        }
+                    }
+    }
+    printf("-------------------------\n");
 }
 
 /* 合法request
