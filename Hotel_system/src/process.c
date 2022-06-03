@@ -29,6 +29,7 @@ void cancelany(const struct request *rqt);
 void check(const struct request *rqt);
 
 // 执行上面的处理函数时借助的函数
+char *enumtostr(command_type command);
 int find_index(const char *name);
 void print_reserveInfo(int index);
 bool isavailable(const struct request *rqt, int index);
@@ -50,6 +51,33 @@ void alter_reserveInfo(const struct request *rqt, int index);
  **************************************************************
  */
 
+char *enumtostr(command_type command) {
+    char *cmd = (char *)malloc(sizeof(char) * 15);
+    switch (command) {
+    case 0:
+        strcpy(cmd, "reserve");
+        break;
+    case 1:
+        strcpy(cmd, "cancel");
+        break;
+    case 2:
+        strcpy(cmd, "reserveblock");
+        break;
+    case 3:
+        strcpy(cmd, "cancelblock");
+        break;
+    case 4:
+        strcpy(cmd, "reserveany");
+        break;
+    case 5:
+        strcpy(cmd, "cancelany");
+        break;
+    case 6:
+        strcpy(cmd, "check");
+    }
+    return cmd;
+}
+
 /**
  * @brief 处理一条请求的函数
  *
@@ -59,8 +87,8 @@ void rqt_process(struct request *rqt) {
     // 模拟客人操作时间
     sleep(rqt->time);
     sem_wait(roomSem);
-    printf("command %d %d %d %d %d %d %d %s\n",
-           rqt->command,
+    printf("%-13s room_num=%-3d room_id=%-3d %4d-%2d-%-2d reserve_days=%-2d name=%s\n",
+           enumtostr(rqt->command),
            rqt->room_num,
            rqt->room_id,
            rqt->year,
@@ -126,7 +154,8 @@ void request_process(struct customerRequest *all_requests, int n) {
             exit(1);
         } else if (pid == 0) { // 子进程，执行请求处理函数后直接结束
             process(&all_requests[i]);
-            return;
+            fflush(stdout); // 清空输出缓冲区，防止和父进程输出交叉
+            exit(0);
         }
     }
 
@@ -264,7 +293,7 @@ void cancelblock(const struct request *rqt) {
  * @param rqt {reserveany 房间数 年 月 日 预约天数 预约姓名 time}
  */
 void reserveany(const struct request *rqt) {
-    int j = 1;              // j
+    int j = 1;
     int ids[rqt->room_num]; // 如果可以找到请求所需的房间，那么ids存储这些房间号
     struct request tmp = *rqt;
     tmp.command = RESERVE;
@@ -291,6 +320,7 @@ void reserveany(const struct request *rqt) {
     if (index == -1) // 如果rqt是一个reserve请求但是共享内存区中没有该客人的记录
         index = reserveInfo->customer_num++;
     for (int i = 0; i < rqt->room_num; i++) {
+        printf("%d\n", ids[i]);
         tmp.room_id = ids[i];
         alter_roomInfo(&tmp);
         alter_reserveInfo(&tmp, index);
@@ -394,7 +424,7 @@ int *get_room_ids(int room_id, int num) {
     for (int i = 0; i < num; i++) {
         while (!roomInfo->room_id[room_id])
             room_id++;
-        ids[i] = room_id;
+        ids[i] = room_id++;
     }
     return ids;
 }
@@ -527,7 +557,7 @@ int find_index(const char *name) {
  * @param index
  */
 void print_reserveInfo(int index) {
-    printf("-------------------------\n");
+    printf("--------------------------\n");
     printf("| room_id |     date     |\n");
     for (int i = 1; i < MAX_NUM_ROOM; i++) {
         // if (!rrinfo->room_id[i])
@@ -541,7 +571,7 @@ void print_reserveInfo(int index) {
                         printf("| %5d   |  %4d %2d %2d  |\n", i, j + 2022, k, l);
                     }
     }
-    printf("-------------------------\n");
+    printf("--------------------------\n");
 }
 
 /**

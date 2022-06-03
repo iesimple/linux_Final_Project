@@ -41,6 +41,8 @@ int mq_notify(mqd_t mqdes, const struct sigevent *notification);
 ```c
 #include <unistd.h>
 // 解析命令行参数，opstring是一个字符串，每个字符代表一个选项，可以是除了'-',':',';'以外任何一个可见的ascll字符，特别的，如果一个选项字符后跟着一个冒号，则代表该选项后需要参数
+// 每次只解析一个，成功返回1，失败返回-1
+// 这函数有点奇怪，看文档好像返回的应该是检测到的char才对
 int getopt(int argc, char *const argv[],const char *optstring);
 
 ```

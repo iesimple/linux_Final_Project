@@ -65,25 +65,23 @@ void systemStart(const char *filepath) {
 }
 
 void print_stat() {
-    printf("--------------------------------\n");
-    printf("|     date     | customer_name |\n");
-    for (int index = 0; index < reserveInfo->customer_num; index++) {
-        for (int i = 1; i < MAX_NUM_ROOM; i++) {
-            if (!roomInfo->room_id[i]) // 不存在的房间号
-                continue;
-            printf("        room %d        \n", i);
-            for (int j = 0; j < 2; j++)          // 年
-                for (int k = 1; k < 13; k++)     // 月
-                    for (int l = 1; l < 32; l++) // 日
-                    {
-                        if (roomInfo->flag[i][j][k][l]) {
-                            printf("|  %4d %2d %2d  | %13s |\n", j + 2022, k, l, roomInfo->name[i][j][k][l]);
-                        }
+    printf("---------------Hotel stat-----------------\n");
+    printf("------------------------------------------\n");
+    printf("|     date     | customer_name | room_id |\n");
+    for (int i = 1; i < MAX_NUM_ROOM; i++) {
+        if (!roomInfo->room_id[i]) // 不存在的房间号
+            continue;
+        bool flag = true;
+        for (int j = 0; j < 2; j++)          // 年
+            for (int k = 1; k < 13; k++)     // 月
+                for (int l = 1; l < 32; l++) // 日
+                {
+                    if (roomInfo->flag[i][j][k][l]) {
+                        printf("|  %4d %2d %2d  | %11s   | %5d   |\n", j + 2022, k, l, roomInfo->name[i][j][k][l], i);
                     }
-        }
+                }
     }
-
-    printf("-------------------------------\n");
+    printf("------------------------------------------\n");
 }
 
 /* 合法request

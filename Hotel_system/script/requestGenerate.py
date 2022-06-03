@@ -6,10 +6,9 @@ import re
 class FileGenerate():
     def __init__(self, filepath, room_n, customer_n) -> None:
         random.seed()
-        # room ids
         self.ids = []
         self.all_requests = []
-        self.id_threshold = 0.85
+        self.id_threshold = 0.9
         self.filepath = filepath if filepath != '' else './in.txt'
         self.room_n = room_n
         self.customer_n = customer_n

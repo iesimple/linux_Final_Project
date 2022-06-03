@@ -26,17 +26,11 @@ int main(int argc, char **argv) {
     // 特别的，如果一个选项字符后跟着一个冒号，则代表该选项后需要参数
     // 参数会保存在optarg
     const char *filepath = NULL;
-    int c;
-    if (c = getopt(argc, argv, "f:") != -1) {
-        if (c == 'f') // 提供输入文件路径
-            filepath = optarg;
-        else {
-            printf("usage: ./main [-f <filename>]\n");
-            return -1;
-        }
-    } else // 没有提供输入文件路径，使用默认地址
+    char c;
+    if (c = getopt(argc, argv, "f:") != -1)
+        filepath = optarg;
+    else // 没有提供输入文件路径，使用默认地址
         printf("文件输入将使用默认地址，请确保路径下存在输入文件!\n");
-
     systemRun(filepath);
     return 0;
 }
