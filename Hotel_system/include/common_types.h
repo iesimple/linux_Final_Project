@@ -5,7 +5,7 @@
 #define BUFF_SIZE 10
 #define MAX_LEN_NAME 25       // 客人名字的最大长度
 #define MAX_LEN_ONE_REQUEST 9 // 一条请求的最大长度
-#define MAX_NUM_ROOM 128      // 最大宾馆房间数
+#define MAX_NUM_ROOM 192      // 最大宾馆房间号，注意这里要求最大的房间号要小于这里的数字   
 #define MAX_NUM_CUSTOM 255    // 最大客人数
 
 /**
@@ -88,6 +88,7 @@ typedef struct
 typedef struct
 {
     bool room_id[MAX_NUM_ROOM]; // 房间号i存在则room_id[i]=true
+    int max_room_id;
     // flag[i][j][k][l] - 房间i在j-k-l这一天是否被预约
     // 2 - 2022 or 2023
     // 13 - 12个月，为了方便访问
