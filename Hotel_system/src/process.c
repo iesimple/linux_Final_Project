@@ -418,17 +418,17 @@ bool isexit(int room_id) {
  * @return int* 所有房间号
  */
 int *get_room_ids(int room_id, int num) {
-    if (!isexit(room_id)) { // 起始房间号不存在，认为用户输入错误
+    if (!isexit(room_id)) // 起始房间号不存在，认为用户输入错误
         printf("roomid is not exit!\n");
-        return;
+    else {
+        int *ids = (int *)malloc(sizeof(int) * num);
+        for (int i = 0; i < num; i++) {
+            while (!roomInfo->room_id[room_id])                      // 找到存在的房间号，这里不对房间的预约信息做判断
+                room_id = (++room_id) % (roomInfo->max_room_id + 1); // 超过最大房间号，循环，即回到最开始
+            ids[i] = (++room_id) % (roomInfo->max_room_id + 1);
+        }
+        return ids;
     }
-    int *ids = (int *)malloc(sizeof(int) * num);
-    for (int i = 0; i < num; i++) {
-        while (!roomInfo->room_id[room_id])                      // 找到存在的房间号，这里不对房间的预约信息做判断
-            room_id = (++room_id) % (roomInfo->max_room_id + 1); // 超过最大房间号，循环，即回到最开始
-        ids[i] = (++room_id) % (roomInfo->max_room_id + 1);
-    }
-    return ids;
 }
 
 /**
