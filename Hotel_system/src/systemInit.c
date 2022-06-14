@@ -180,8 +180,8 @@ void fileReader(const char *filepath) {
     while (length = getline(&line, &linecap, fp) != -1) {
         if (line[0] < 48)
             continue;
-        line[strlen(line) - 1] = 0;
-        strcpy(all_requests[num].name, line); // 尾部会多一个回车
+        line[strlen(line) - 1] = 0; // 删除尾部多的一个回车
+        strcpy(all_requests[num].name, line); 
         while (length = getline(&line, &linecap, fp) != -1) {
             // printf("%s", line);
             tmp = (struct requestList *)malloc(sizeof(struct requestList));

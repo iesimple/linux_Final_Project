@@ -8,6 +8,6 @@
 #define RESERVE_INFO_SEM "reserveInfo_sem" // 保护对预约信息共享内存区修改的信号量
 #define PROCESS_NUM_SEM "process_num_sem"  // 限制最大并发线程数
 
-#define FILE_PATH "../resource/in.txt" // 输入文件的位置
+#define FILE_PATH "../resource/in.txt" // 输入文件的默认位置
 
 #endif
