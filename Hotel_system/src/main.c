@@ -14,7 +14,7 @@
 /**
  * @brief 根据输入的filepath，初始化宾馆信息，处理用户请求
  *
- * @param filepath 输入文件的路径，如果为NULL则是默认路径 "./input.txt"
+ * @param filepath 输入文件的路径，如果为NULL则是默认路径 "../resource/in.txt"
  */
 void systemRun(const char *filepath) {
     systemStart(filepath);
