@@ -320,7 +320,6 @@ void reserveany(const struct request *rqt) {
     if (index == -1) // 如果rqt是一个reserve请求但是共享内存区中没有该客人的记录
         index = reserveInfo->customer_num++;
     for (int i = 0; i < rqt->room_num; i++) {
-        printf("%d\n", ids[i]);
         tmp.room_id = ids[i];
         alter_roomInfo(&tmp);
         alter_reserveInfo(&tmp, index);
@@ -412,19 +411,18 @@ bool isexit(int room_id) {
 }
 
 /**
- * @brief 返回所申请的所有房间号，因为房间号可能是不连续的
+ * @brief 返回申请的所有房间
  *
- * @param room_id 起始房间号
- * @param num 房间数
- * @return true 所申请的所有房间都是存在的
- * @return false
+ * @param room_id
+ * @param num
+ * @return int*
  */
 int *get_room_ids(int room_id, int num) {
-    int *ids = (int *)malloc(sizeof(int));
+    int *ids = (int *)malloc(sizeof(int) * num);
     for (int i = 0; i < num; i++) {
         while (!roomInfo->room_id[room_id])
-            room_id++;
-        ids[i] = room_id++;
+            room_id = (++room_id) % (roomInfo->max_room_id + 1);
+        ids[i] = (++room_id) % (roomInfo->max_room_id + 1);
     }
     return ids;
 }

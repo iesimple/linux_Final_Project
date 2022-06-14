@@ -181,7 +181,7 @@ void fileReader(const char *filepath) {
         if (line[0] < 48)
             continue;
         line[strlen(line) - 1] = 0; // 删除尾部多的一个回车
-        strcpy(all_requests[num].name, line); 
+        strcpy(all_requests[num].name, line);
         while (length = getline(&line, &linecap, fp) != -1) {
             // printf("%s", line);
             tmp = (struct requestList *)malloc(sizeof(struct requestList));
@@ -210,6 +210,11 @@ void roomInfo_init(roomInfo_shm *roomInfo) {
     memset(roomInfo, 0, sizeof(roomInfo)); // 共享内存区全部清零
     for (int i = 0; i < total_room; i++)
         roomInfo->room_id[room_id[i]] = true;
+    roomInfo->max_room_id = room_id[total_room - 1];
+    if (roomInfo->max_room_id >= MAX_NUM_ROOM) {
+        printf("最大房间号超出限制, 修改输入或者修改common_type中MAX_NUM_ROOM!\n");
+        exit(-1);
+    }
 }
 
 /**
