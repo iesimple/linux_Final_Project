@@ -1,25 +1,23 @@
-50
+128
 1
 2
 3
 4
-5
 6
 7
 8
 9
-10
 11
 12
+13
 14
 15
 17
+18
 19
-20
 21
 22
 23
-24
 25
 26
 27
@@ -30,9 +28,10 @@
 33
 34
 35
-36
 37
+38
 39
+40
 41
 42
 43
@@ -44,364 +43,1976 @@
 49
 50
 51
+52
 53
 55
+56
 57
 58
 59
-50
+60
+61
+62
+63
+64
+65
+66
+67
+68
+70
+71
+72
+73
+74
+75
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+130
+131
+132
+134
+135
+136
+137
+138
+139
+140
+141
+255
 customer0
-reserveany 3 2022 1 23 1 customer0 0
-reserveblock 4 27 2022 8 13 1 customer0 0
-check customer0 0
-reserveblock 2 57 2023 12 24 2 customer0 0
-cancelblock 2 16 2022 1 23 1 customer0 0
-reserveany 3 2022 3 9 9 customer0 0
-reserve 54 2022 11 7 5 customer0 0
-reserve 38 2022 1 20 10 customer0 0
+reserve 70 2022 11 26 7 customer0 0
+reserveblock 2 20 2022 12 19 10 customer0 0
+reserve 60 2023 7 27 6 customer0 0
+cancelblock 7 20 2022 12 19 1 customer0 0
+cancelany 2 2022 12 19 10 customer0 0
+reserveblock 4 122 2023 8 3 2 customer0 0
+cancelblock 5 103 2022 12 19 8 customer0 0
+reserveblock 10 117 2022 5 11 10 customer0 0
+cancelany 9 2022 12 19 8 customer0 0
 end
 customer1
-reserve 35 2023 5 12 2 customer1 0
-reserveany 4 2023 1 9 3 customer1 0
-cancelany 2 16 2022 1 23 1 customer1 0
-cancelany 1 18 2022 3 9 1 customer1 0
-reserve 42 2022 12 31 6 customer1 0
-check customer1 0
-cancel 5 2022 1 23 1 customer1 0
+reserveblock 6 85 2023 5 15 5 customer1 0
 end
 customer2
-reserve 57 2022 8 24 8 customer2 0
-reserveany 4 2022 11 23 9 customer2 0
-reserve 2 2023 9 9 8 customer2 0
-reserveblock 3 11 2022 10 8 9 customer2 0
-reserve 24 2023 7 17 9 customer2 0
-cancelblock 2 27 2022 8 13 1 customer2 0
-check customer2 0
-reserveblock 5 21 2022 3 2 5 customer2 0
-cancelblock 3 20 2022 1 23 1 customer2 0
+reserveblock 5 86 2022 3 4 5 customer2 0
+reserve 2 2023 5 13 10 customer2 0
 end
 customer3
-reserveany 2 2023 2 1 10 customer3 0
-reserveany 4 2022 5 21 10 customer3 0
-reserveblock 1 48 2023 4 26 1 customer3 0
+reserve 22 2023 2 7 9 customer3 0
+reserveany 4 2023 1 5 9 customer3 0
+cancelblock 5 103 2022 12 19 5 customer3 0
+cancelblock 8 22 2023 2 7 2 customer3 0
 end
 customer4
-reserveblock 3 54 2022 8 9 8 customer4 0
-reserve 31 2023 4 9 6 customer4 0
-reserve 14 2023 7 15 10 customer4 0
-reserveblock 4 5 2023 11 11 8 customer4 0
-check customer4 0
-cancelany 4 38 2022 1 20 5 customer4 0
-cancelblock 5 24 2023 7 17 9 customer4 0
-cancelany 2 5 2023 11 11 1 customer4 0
-check customer4 0
-check customer4 0
-end
-customer0
-reserveany 4 2022 6 21 3 customer0 0
-reserve 2 2023 5 22 9 customer0 0
-cancel 14 2023 7 15 10 customer0 0
+reserve 53 2022 9 18 5 customer4 0
+reserveblock 5 124 2023 7 6 7 customer4 0
+reserveblock 2 105 2022 6 29 1 customer4 0
+cancel 39 2022 12 19 4 customer4 0
+reserve 66 2022 11 11 4 customer4 0
+reserveany 6 2023 2 11 9 customer4 0
+reserveblock 9 130 2023 8 28 9 customer4 0
+cancelblock 8 22 2023 2 7 1 customer4 0
+cancelblock 3 130 2023 8 28 8 customer4 0
 end
 customer5
-reserve 3 2023 8 5 7 customer5 0
-reserveblock 1 49 2022 8 2 1 customer5 0
+reserve 141 2023 2 18 10 customer5 0
+reserve 115 2022 4 11 10 customer5 0
+reserveany 2 2023 9 11 1 customer5 0
+reserveblock 3 49 2023 7 13 8 customer5 0
+cancelany 6 2023 2 18 9 customer5 0
+cancelblock 2 2 2023 5 13 10 customer5 0
 check customer5 0
-reserveany 5 2022 3 17 4 customer5 0
-check customer5 0
-cancelblock 5 3 2022 1 23 1 customer5 0
-cancelblock 2 5 2022 1 23 1 customer5 0
-cancel 19 2022 3 9 5 customer5 0
-cancel 35 2023 5 12 1 customer5 0
+cancelany 2 2022 12 19 1 customer5 0
+end
+customer6
+reserveblock 8 109 2023 6 10 6 customer6 0
+reserveany 10 2022 12 1 2 customer6 0
+check customer6 0
+cancelblock 3 85 2023 5 15 3 customer6 0
+reserve 116 2022 3 2 4 customer6 0
+reserveany 4 2023 6 26 1 customer6 0
+cancelblock 5 105 2022 6 29 1 customer6 0
 end
 customer7
-reserve 54 2023 9 21 10 customer7 0
-reserveany 1 2023 5 17 9 customer7 0
-cancel 48 2023 4 26 1 customer7 0
-reserveblock 4 33 2023 4 14 4 customer7 0
-reserveblock 4 25 2023 8 17 5 customer7 0
+reserveany 10 2023 12 26 1 customer7 0
+reserve 102 2023 2 28 2 customer7 0
 end
 customer8
-reserveblock 2 29 2022 9 14 8 customer8 0
-reserve 53 2023 6 4 10 customer8 0
-cancelblock 1 3 2023 8 5 6 customer8 0
-cancel 24 2022 1 23 1 customer8 0
-reserveblock 5 19 2022 6 4 6 customer8 0
-reserveblock 3 29 2023 4 13 2 customer8 0
-reserve 32 2022 12 30 2 customer8 0
+reserve 128 2023 7 28 7 customer8 0
+reserveany 6 2023 7 23 8 customer8 0
+reserveblock 3 9 2023 11 20 10 customer8 0
+cancel 2 2023 5 13 2 customer8 0
+cancelany 4 2022 12 19 2 customer8 0
+check customer8 0
 end
 customer9
-reserveany 3 2022 10 1 2 customer9 0
-reserveblock 4 32 2023 4 19 9 customer9 0
-reserve 52 2022 2 17 9 customer9 0
-cancel 17 2022 1 23 1 customer9 0
-reserve 57 2023 6 24 1 customer9 0
-cancelany 4 14 2023 7 15 9 customer9 0
-cancelblock 2 27 2022 8 13 1 customer9 0
+reserveany 7 2022 3 18 4 customer9 0
+reserveblock 1 84 2023 3 31 3 customer9 0
+reserve 64 2023 8 16 10 customer9 0
+check customer9 0
+cancel 9 2023 11 20 1 customer9 0
+cancel 20 2022 12 19 1 customer9 0
+cancel 3 2023 2 11 4 customer9 0
+cancel 99 2023 2 11 5 customer9 0
 end
 customer10
-reserveany 5 2023 8 11 5 customer10 0
+reserveblock 3 117 2023 5 19 2 customer10 0
+reserveblock 1 45 2023 10 13 4 customer10 0
+reserveany 10 2022 1 30 8 customer10 0
 end
 customer11
-reserveblock 5 36 2022 9 18 2 customer11 0
-reserveany 3 2023 7 9 2 customer11 0
-reserve 16 2022 12 23 9 customer11 0
-cancelany 4 21 2022 3 2 5 customer11 0
-reserve 1 2022 7 21 10 customer11 0
-reserve 12 2022 9 4 2 customer11 0
-cancelany 3 1 2022 7 21 9 customer11 0
-reserveblock 3 15 2022 10 7 1 customer11 0
+reserve 137 2022 10 28 10 customer11 0
+reserveblock 6 117 2023 8 3 3 customer11 0
+cancelblock 5 85 2023 5 15 2 customer11 0
+check customer11 0
+cancel 117 2022 5 11 9 customer11 0
+reserveany 7 2023 7 2 10 customer11 0
+check customer11 0
+cancelblock 6 45 2023 10 13 2 customer11 0
 end
 customer12
-reserveblock 5 55 2022 8 19 2 customer12 0
-reserve 34 2023 4 1 10 customer12 0
-reserve 54 2022 6 12 7 customer12 0
-check customer12 0
-cancelany 4 1 2022 7 21 9 customer12 0
-cancelany 5 33 2023 4 14 3 customer12 0
-check customer12 0
+reserve 9 2023 3 17 7 customer12 0
+reserve 18 2023 8 18 5 customer12 0
+cancel 22 2023 2 7 4 customer12 0
+cancelblock 2 128 2023 7 28 4 customer12 0
+cancel 86 2022 3 4 4 customer12 0
+reserveblock 6 125 2022 11 14 6 customer12 0
 end
 customer13
-reserveblock 1 1 2022 11 15 10 customer13 0
-reserveany 3 2023 5 1 7 customer13 0
-reserveblock 2 6 2023 6 25 5 customer13 0
-cancelany 1 35 2023 5 1 3 customer13 0
+reserveblock 7 46 2023 1 25 1 customer13 0
+reserveblock 7 130 2022 5 1 7 customer13 0
 check customer13 0
-cancelany 2 21 2022 3 2 1 customer13 0
-reserveblock 2 7 2023 7 7 5 customer13 0
-reserveblock 4 48 2023 7 15 1 customer13 0
+cancelany 6 2023 6 26 1 customer13 0
+reserveblock 1 133 2023 5 29 3 customer13 0
+reserveblock 6 20 2022 8 14 3 customer13 0
+check customer13 0
+reserveany 10 2023 2 17 10 customer13 0
+reserveany 9 2023 7 4 3 customer13 0
 end
 customer14
-reserve 15 2022 3 25 3 customer14 0
-reserve 39 2022 7 1 1 customer14 0
+reserveblock 3 24 2022 4 15 10 customer14 0
+reserveany 1 2022 8 9 3 customer14 0
+reserveblock 1 28 2023 12 29 2 customer14 0
+cancel 43 2022 12 19 2 customer14 0
+reserveblock 10 47 2023 11 29 3 customer14 0
+cancelblock 2 77 2023 6 26 1 customer14 0
 check customer14 0
-reserveblock 3 57 2023 8 21 7 customer14 0
+cancelany 2 2023 1 25 1 customer14 0
+reserveblock 2 138 2022 7 29 10 customer14 0
+reserveblock 8 58 2023 12 6 8 customer14 0
 end
 customer15
-reserveblock 5 41 2022 5 24 9 customer15 0
+reserveany 8 2022 9 18 9 customer15 0
+reserve 109 2022 1 10 9 customer15 0
+check customer15 0
+reserve 124 2022 11 11 2 customer15 0
+reserveblock 4 69 2022 9 25 7 customer15 0
+cancelany 3 2023 5 15 3 customer15 0
+reserveany 3 2022 9 14 1 customer15 0
+check customer15 0
 end
 customer16
-reserveblock 2 51 2023 4 10 8 customer16 0
-reserve 56 2023 2 22 9 customer16 0
-cancelany 3 32 2023 4 19 9 customer16 0
+reserveany 6 2023 8 2 10 customer16 0
+reserve 30 2023 2 14 5 customer16 0
+check customer16 0
 end
 customer17
-reserve 52 2023 12 19 3 customer17 0
-reserve 2 2022 1 14 2 customer17 0
-reserveblock 5 28 2022 11 6 3 customer17 0
-cancelany 3 3 2022 1 23 1 customer17 0
-cancel 1 2022 7 21 2 customer17 0
+reserve 3 2022 4 26 5 customer17 0
+reserveany 3 2022 8 9 1 customer17 0
+check customer17 0
+cancelany 6 2023 2 11 4 customer17 0
+cancel 117 2022 5 11 3 customer17 0
+reserveblock 5 34 2022 9 10 10 customer17 0
+reserve 131 2022 8 16 8 customer17 0
 end
 customer18
-reserveblock 1 54 2023 8 29 9 customer18 0
-reserve 16 2022 9 23 5 customer18 0
+reserve 3 2023 4 19 7 customer18 0
+reserve 113 2022 7 14 5 customer18 0
+reserveany 6 2022 3 30 1 customer18 0
 check customer18 0
 end
 customer19
-reserve 49 2022 1 5 2 customer19 0
-reserve 35 2022 6 17 3 customer19 0
-reserve 3 2023 7 12 5 customer19 0
-reserve 17 2022 11 26 7 customer19 0
-reserveany 2 2023 4 15 1 customer19 0
-cancelany 4 3 2022 1 23 1 customer19 0
+reserveblock 1 48 2023 2 7 2 customer19 0
+reserveany 4 2022 11 18 1 customer19 0
+cancelblock 9 24 2022 4 15 9 customer19 0
+reserveany 10 2023 12 13 10 customer19 0
+cancelany 6 2022 9 25 4 customer19 0
+reserveany 7 2023 9 7 6 customer19 0
 end
-customer2
-reserveany 3 2023 11 23 8 customer2 0
-reserveany 2 2022 12 23 6 customer2 0
-cancel 9 2022 5 21 6 customer2 0
-check customer2 0
-cancel 14 2023 5 17 1 customer2 0
-cancel 6 2023 6 25 2 customer2 0
-reserve 3 2023 10 2 8 customer2 0
-cancelany 2 5 2023 11 11 6 customer2 0
+customer20
+reserveblock 9 113 2022 12 2 2 customer20 0
+reserve 121 2022 12 25 4 customer20 0
+reserveany 6 2022 11 20 2 customer20 0
 end
 customer21
-reserveany 4 2023 5 14 7 customer21 0
-reserveany 4 2023 12 23 8 customer21 0
-cancelany 5 3 2023 5 1 4 customer21 0
-cancel 2 2023 5 22 1 customer21 0
-cancelblock 2 1 2022 1 23 1 customer21 0
-cancel 54 2023 8 29 6 customer21 0
+reserveany 3 2022 3 27 8 customer21 0
+reserveany 10 2022 2 9 1 customer21 0
 check customer21 0
-cancel 25 2023 8 11 2 customer21 0
+check customer21 0
+reserveblock 6 67 2022 7 24 1 customer21 0
+reserve 62 2023 2 7 5 customer21 0
+cancelany 8 2023 7 28 2 customer21 0
+cancelany 5 2023 5 19 2 customer21 0
+reserveblock 10 86 2023 10 30 5 customer21 0
 end
 customer22
-reserveany 3 2022 9 23 7 customer22 0
-reserveblock 5 10 2023 11 19 10 customer22 0
+reserveany 3 2022 1 8 6 customer22 0
+reserveblock 4 9 2022 2 8 9 customer22 0
+reserve 140 2022 9 11 3 customer22 0
 end
 customer23
-reserve 20 2022 3 30 10 customer23 0
-reserveblock 1 26 2022 10 8 1 customer23 0
-cancel 3 2023 8 5 6 customer23 0
-reserve 33 2023 8 1 9 customer23 0
-cancel 49 2022 1 5 1 customer23 0
+reserve 55 2022 11 9 10 customer23 0
 end
-customer24
-reserveblock 1 53 2023 3 9 1 customer24 0
-reserveany 1 2023 1 17 10 customer24 0
-reserveblock 4 55 2023 5 16 7 customer24 0
-reserveblock 3 45 2023 5 15 4 customer24 0
-reserveblock 3 35 2023 10 31 9 customer24 0
-reserve 45 2022 3 7 6 customer24 0
+customer13
+reserveany 2 2022 10 16 7 customer13 0
+reserveblock 7 141 2022 3 5 5 customer13 0
+cancelany 4 2023 5 13 1 customer13 0
+cancelblock 8 116 2022 3 2 2 customer13 0
+cancelany 7 2022 11 20 1 customer13 0
+cancelblock 2 109 2023 6 10 2 customer13 0
+cancelblock 4 128 2023 7 28 5 customer13 0
 end
 customer25
-reserveblock 1 59 2023 12 9 9 customer25 0
-reserveany 2 2022 8 31 6 customer25 0
-reserveblock 4 35 2023 3 22 6 customer25 0
+reserveany 6 2023 9 28 4 customer25 0
+reserveany 8 2022 4 9 1 customer25 0
+reserve 89 2023 6 29 7 customer25 0
+cancelblock 9 2 2023 5 13 1 customer25 0
+check customer25 0
 end
 customer26
-reserve 6 2023 8 5 8 customer26 0
-reserveany 5 2023 4 13 1 customer26 0
+reserveblock 7 72 2023 4 7 5 customer26 0
+reserveblock 9 18 2022 2 17 6 customer26 0
+reserveblock 4 108 2022 5 22 5 customer26 0
+cancel 78 2023 6 26 1 customer26 0
 end
 customer27
-reserveblock 5 15 2023 6 1 9 customer27 0
-reserveblock 2 35 2023 3 16 2 customer27 0
+reserve 81 2022 12 1 1 customer27 0
+reserveany 2 2022 1 24 5 customer27 0
+cancel 117 2022 5 11 1 customer27 0
+reserve 49 2023 1 15 2 customer27 0
 end
 customer28
-reserveany 5 2023 6 18 3 customer28 0
-reserveany 2 2022 6 5 6 customer28 0
-reserveany 4 2022 11 9 3 customer28 0
-reserveany 3 2023 6 10 9 customer28 0
-cancelblock 3 3 2023 8 5 4 customer28 0
-reserve 7 2023 9 26 9 customer28 0
-reserveany 1 2022 5 14 3 customer28 0
+reserve 119 2022 12 14 2 customer28 0
+reserveblock 6 39 2023 9 4 7 customer28 0
+check customer28 0
+cancel 22 2023 2 7 1 customer28 0
+reserveblock 2 19 2022 7 8 5 customer28 0
+cancelblock 5 2 2023 5 13 5 customer28 0
+reserveblock 7 87 2022 10 3 7 customer28 0
 end
-customer15
-reserve 55 2023 9 25 9 customer15 0
+customer13
+reserveany 7 2023 6 26 9 customer13 0
+reserve 38 2022 8 17 2 customer13 0
+cancelany 4 2023 8 3 2 customer13 0
+reserveblock 5 102 2022 11 12 5 customer13 0
 end
 customer30
-reserveany 1 2022 12 17 5 customer30 0
-reserveany 1 2023 3 18 2 customer30 0
-reserveblock 2 30 2023 7 1 5 customer30 0
-cancel 6 2023 5 1 3 customer30 0
-cancelany 2 15 2022 10 7 1 customer30 0
-check customer30 0
-cancelany 4 31 2023 4 9 6 customer30 0
-reserve 21 2022 12 6 9 customer30 0
+reserveblock 4 64 2023 5 4 4 customer30 0
+reserve 118 2022 10 24 10 customer30 0
+reserve 83 2022 12 31 8 customer30 0
+reserveblock 5 15 2022 5 24 5 customer30 0
+cancel 116 2022 3 2 1 customer30 0
+reserveblock 9 109 2022 12 31 5 customer30 0
 end
 customer31
-reserveany 1 2022 5 29 10 customer31 0
-reserve 40 2022 12 26 2 customer31 0
-cancel 17 2022 11 26 6 customer31 0
-reserveany 2 2023 3 9 10 customer31 0
+reserveblock 1 12 2022 12 2 3 customer31 0
+reserve 82 2022 7 2 6 customer31 0
+reserveblock 4 140 2022 6 26 7 customer31 0
+cancelblock 1 9 2023 3 17 4 customer31 0
+cancelblock 2 107 2023 5 15 1 customer31 0
+reserveblock 8 131 2023 1 4 4 customer31 0
+cancelany 6 2023 6 26 1 customer31 0
+cancel 121 2022 12 25 4 customer31 0
+cancelany 2 2022 8 9 1 customer31 0
+reserveany 1 2023 7 20 1 customer31 0
 end
 customer32
-reserveblock 3 10 2022 1 13 6 customer32 0
-reserveblock 3 6 2022 7 28 6 customer32 0
-cancel 48 2023 4 26 1 customer32 0
-reserveany 4 2022 5 1 1 customer32 0
-check customer32 0
-cancelany 1 30 2023 5 1 1 customer32 0
+reserve 101 2022 3 3 2 customer32 0
+reserve 56 2022 3 10 9 customer32 0
+cancelany 7 2022 3 30 1 customer32 0
+reserveblock 4 90 2023 11 12 6 customer32 0
+cancel 97 2022 8 9 1 customer32 0
+cancelblock 3 32 2023 7 4 2 customer32 0
 end
-customer33
-reserveblock 3 2 2023 3 30 8 customer33 0
-reserveblock 1 54 2023 4 29 1 customer33 0
-reserveany 4 2022 8 22 4 customer33 0
-cancel 3 2023 7 15 3 customer33 0
-check customer33 0
-cancelblock 3 1 2022 8 31 2 customer33 0
-reserve 42 2022 11 25 8 customer33 0
-cancelany 2 11 2023 11 11 4 customer33 0
+customer7
+reserveblock 7 2 2022 7 23 3 customer7 0
+reserve 6 2023 2 11 8 customer7 0
 end
 customer34
-reserveblock 4 14 2022 11 8 3 customer34 0
-reserve 9 2023 2 23 1 customer34 0
-check customer34 0
-reserve 35 2023 5 13 6 customer34 0
-reserveblock 3 36 2022 9 5 10 customer34 0
-cancelany 1 14 2023 7 15 8 customer34 0
-cancelblock 2 48 2023 4 9 1 customer34 0
+reserveany 5 2022 1 10 3 customer34 0
+reserveany 1 2023 12 25 2 customer34 0
 end
-customer35
-reserveblock 1 8 2022 5 4 3 customer35 0
+customer6
+reserveany 4 2022 4 25 3 customer6 0
+reserveany 4 2023 8 5 10 customer6 0
+check customer6 0
+reserveblock 5 29 2023 5 7 5 customer6 0
+cancel 83 2022 12 31 2 customer6 0
 end
 customer36
-reserveblock 4 8 2023 6 10 2 customer36 0
-reserveany 5 2022 12 4 4 customer36 0
-reserveany 1 2023 12 31 1 customer36 0
+reserveany 2 2022 11 26 6 customer36 0
+reserveany 5 2022 3 7 2 customer36 0
+cancel 22 2023 2 7 5 customer36 0
+reserveblock 10 116 2023 12 5 7 customer36 0
 end
 customer37
-reserveblock 5 8 2022 3 23 1 customer37 0
-reserveblock 4 34 2022 11 29 5 customer37 0
-reserveany 1 2022 8 17 3 customer37 0
-check customer37 0
+reserveany 9 2023 6 21 5 customer37 0
+reserve 26 2023 6 2 8 customer37 0
 end
 customer38
-reserve 16 2022 3 22 10 customer38 0
-reserveblock 4 56 2023 12 17 5 customer38 0
-reserve 51 2022 3 8 1 customer38 0
-reserveblock 5 4 2022 12 4 9 customer38 0
+reserve 127 2022 4 1 2 customer38 0
+reserveblock 5 116 2023 6 17 10 customer38 0
+cancelblock 3 39 2022 12 19 3 customer38 0
+cancelblock 3 128 2023 7 28 4 customer38 0
+reserve 68 2022 10 27 7 customer38 0
+check customer38 0
+cancelblock 8 66 2022 11 11 2 customer38 0
+cancelblock 2 14 2022 11 20 2 customer38 0
 end
 customer39
-reserve 37 2023 11 3 9 customer39 0
-reserveblock 1 32 2022 5 27 1 customer39 0
-cancelany 5 50 2022 5 29 2 customer39 0
-cancelblock 3 20 2022 3 30 4 customer39 0
-cancelblock 4 35 2022 3 2 1 customer39 0
-end
-customer40
-reserveany 2 2022 7 29 10 customer40 0
-reserveblock 2 16 2023 4 1 7 customer40 0
-cancelany 2 35 2022 3 2 1 customer40 0
-cancel 48 2023 4 26 1 customer40 0
-cancelany 5 39 2023 6 10 8 customer40 0
+reserveblock 10 49 2023 5 2 5 customer39 0
+reserveblock 10 127 2022 12 5 6 customer39 0
 end
 customer24
-reserve 4 2023 1 23 4 customer24 0
-reserve 26 2022 5 16 6 customer24 0
-cancel 8 2023 6 10 1 customer24 0
-cancelany 4 12 2022 9 4 2 customer24 0
-cancelany 2 51 2022 1 23 1 customer24 0
-check customer24 0
-reserve 50 2023 6 2 4 customer24 0
+reserveblock 5 124 2023 8 5 6 customer24 0
+reserve 90 2022 5 25 10 customer24 0
+cancel 86 2023 10 30 5 customer24 0
 end
-customer16
-reserve 24 2023 7 19 2 customer16 0
-reserve 33 2023 1 28 10 customer16 0
+customer41
+reserveblock 10 68 2023 9 9 7 customer41 0
+reserve 114 2023 1 30 9 customer41 0
+reserveany 4 2022 4 5 8 customer41 0
+reserveblock 4 15 2022 8 10 2 customer41 0
+cancelblock 4 85 2022 2 9 1 customer41 0
+check customer41 0
+cancelany 10 2023 1 30 1 customer41 0
+cancel 38 2022 8 17 2 customer41 0
+end
+customer42
+reserve 71 2022 12 12 1 customer42 0
+reserveblock 4 60 2023 5 14 9 customer42 0
+check customer42 0
+reserveblock 10 70 2023 3 8 6 customer42 0
+cancelblock 2 81 2023 12 13 1 customer42 0
+check customer42 0
+reserve 66 2022 11 19 6 customer42 0
 end
 customer43
-reserveblock 5 26 2023 11 19 4 customer43 0
-reserve 4 2022 8 12 10 customer43 0
-reserveany 3 2022 11 26 1 customer43 0
+reserveblock 6 25 2023 6 28 2 customer43 0
 end
 customer44
-reserveany 5 2023 9 14 7 customer44 0
-reserveblock 2 25 2022 2 19 10 customer44 0
-check customer44 0
-cancelany 3 28 2022 10 7 1 customer44 0
-cancelblock 4 13 2023 1 17 1 customer44 0
-reserveblock 1 31 2023 9 2 4 customer44 0
-cancelany 5 57 2023 12 24 1 customer44 0
+reserve 34 2023 4 19 2 customer44 0
+reserve 132 2022 12 1 4 customer44 0
+cancelblock 4 69 2022 9 25 2 customer44 0
 end
 customer45
-reserveany 2 2022 12 20 4 customer45 0
-reserveany 5 2023 1 12 5 customer45 0
-reserve 23 2023 3 3 5 customer45 0
-reserveany 4 2022 10 26 2 customer45 0
-cancel 26 2022 5 16 4 customer45 0
-reserveany 1 2023 6 3 3 customer45 0
-cancelblock 4 14 2023 7 15 4 customer45 0
-cancelany 1 1 2022 1 23 1 customer45 0
+reserveany 5 2023 9 26 1 customer45 0
+reserve 115 2022 10 30 5 customer45 0
+cancelany 1 2022 11 26 1 customer45 0
+cancelblock 4 113 2022 7 14 1 customer45 0
+cancelany 8 2022 9 25 3 customer45 0
+reserveany 8 2022 7 18 7 customer45 0
+reserveblock 2 21 2022 3 3 8 customer45 0
 end
 customer46
-reserveany 3 2023 11 3 9 customer46 0
-reserveany 2 2022 12 22 5 customer46 0
+reserveany 10 2023 12 13 7 customer46 0
+reserveblock 5 111 2023 2 24 6 customer46 0
+reserveany 7 2022 4 24 2 customer46 0
+reserve 48 2023 12 22 4 customer46 0
 end
 customer47
-reserveblock 1 3 2022 9 13 9 customer47 0
+reserveblock 1 107 2022 1 19 8 customer47 0
+reserveblock 8 16 2022 2 13 3 customer47 0
+reserveany 6 2022 3 7 9 customer47 0
 end
 customer48
-reserve 45 2023 7 14 4 customer48 0
-reserve 5 2023 5 1 1 customer48 0
-cancelblock 3 32 2023 7 15 8 customer48 0
-reserveblock 4 33 2022 8 22 5 customer48 0
-reserve 2 2022 2 17 6 customer48 0
-cancelany 4 17 2022 11 26 2 customer48 0
+reserveany 1 2022 3 27 5 customer48 0
+reserve 25 2022 10 12 9 customer48 0
+reserve 111 2023 6 13 4 customer48 0
+check customer48 0
+reserveblock 7 80 2022 2 20 2 customer48 0
+reserve 76 2023 3 16 9 customer48 0
+reserveany 9 2022 6 1 10 customer48 0
+cancelblock 7 3 2022 4 26 2 customer48 0
+cancelblock 2 20 2022 12 19 2 customer48 0
+reserveblock 2 75 2023 1 7 3 customer48 0
 end
 customer49
-reserveany 2 2023 1 12 9 customer49 0
-reserveany 1 2023 7 26 10 customer49 0
-cancel 50 2022 5 29 1 customer49 0
-reserveany 5 2022 10 18 4 customer49 0
-cancel 28 2023 4 19 6 customer49 0
-reserveany 3 2022 10 14 3 customer49 0
+reserveany 8 2023 12 11 2 customer49 0
+reserveany 5 2023 11 29 8 customer49 0
+cancelany 3 2022 5 11 9 customer49 0
+check customer49 0
+reserveblock 4 120 2022 9 13 9 customer49 0
+end
+customer50
+reserveany 10 2023 8 21 10 customer50 0
+end
+customer51
+reserveblock 3 104 2022 11 20 8 customer51 0
+reserveblock 1 75 2022 9 29 2 customer51 0
+reserveany 9 2023 1 24 1 customer51 0
+reserveblock 4 23 2023 7 3 10 customer51 0
+reserveany 5 2022 3 27 5 customer51 0
+reserveany 1 2022 5 2 5 customer51 0
+reserveany 7 2022 9 29 2 customer51 0
+end
+customer52
+reserveany 1 2022 9 3 9 customer52 0
+reserve 117 2022 1 4 4 customer52 0
+check customer52 0
+cancelblock 5 38 2022 8 17 2 customer52 0
+reserve 134 2023 8 5 5 customer52 0
+cancelblock 7 128 2023 7 28 1 customer52 0
+cancelblock 6 24 2022 4 15 10 customer52 0
+end
+customer53
+reserve 60 2023 2 10 9 customer53 0
+reserve 61 2023 4 12 6 customer53 0
+cancelblock 9 83 2022 12 31 2 customer53 0
+cancelblock 6 46 2023 1 25 1 customer53 0
+reserveblock 7 69 2023 2 5 7 customer53 0
+cancelany 6 2022 9 25 1 customer53 0
+end
+customer54
+reserveany 9 2022 7 3 2 customer54 0
+end
+customer55
+reserveany 1 2022 10 19 4 customer55 0
+reserveany 10 2022 7 15 8 customer55 0
+cancelany 7 2022 12 31 4 customer55 0
+reserve 137 2023 6 4 10 customer55 0
+cancelblock 3 2 2023 5 13 3 customer55 0
+reserveblock 8 43 2023 12 7 8 customer55 0
+check customer55 0
+reserveany 5 2022 12 7 6 customer55 0
+check customer55 0
+cancel 25 2022 3 27 3 customer55 0
+end
+customer56
+reserveany 10 2023 2 15 3 customer56 0
+reserveany 7 2022 11 15 9 customer56 0
+end
+customer57
+reserve 124 2023 7 21 3 customer57 0
+reserve 2 2023 7 2 2 customer57 0
+cancelblock 1 134 2023 8 21 3 customer57 0
+cancelany 3 2022 5 11 1 customer57 0
+end
+customer58
+reserveblock 9 141 2022 2 22 7 customer58 0
+reserveblock 5 41 2022 6 23 7 customer58 0
+reserveany 2 2022 3 11 2 customer58 0
+cancelany 1 2022 11 12 4 customer58 0
+cancel 30 2023 8 5 3 customer58 0
+cancelany 1 2023 11 29 2 customer58 0
+reserveany 9 2023 12 9 10 customer58 0
+check customer58 0
+check customer58 0
+reserve 23 2023 9 8 3 customer58 0
+end
+customer59
+reserveblock 1 140 2023 11 14 9 customer59 0
+reserveblock 1 104 2022 10 23 2 customer59 0
+end
+customer60
+reserveblock 9 77 2022 3 5 1 customer60 0
+reserveany 6 2022 1 23 8 customer60 0
+end
+customer61
+reserveblock 6 108 2022 7 5 3 customer61 0
+reserve 49 2022 12 8 1 customer61 0
+reserve 95 2023 10 12 10 customer61 0
+reserve 27 2023 10 6 2 customer61 0
+cancel 127 2022 4 1 1 customer61 0
+cancelany 10 2022 11 15 6 customer61 0
+end
+customer62
+reserveany 6 2022 6 10 4 customer62 0
+reserve 105 2022 8 11 4 customer62 0
+cancel 117 2022 5 11 7 customer62 0
+cancel 137 2023 6 4 3 customer62 0
+check customer62 0
+end
+customer63
+reserve 132 2022 12 31 9 customer63 0
+reserve 128 2023 11 2 10 customer63 0
+cancelblock 2 60 2023 2 10 8 customer63 0
+reserve 137 2023 5 31 6 customer63 0
+check customer63 0
+end
+customer64
+reserveblock 10 14 2023 11 6 7 customer64 0
+reserveany 7 2023 11 13 7 customer64 0
+cancelany 7 2022 7 5 2 customer64 0
+reserveany 10 2023 6 29 5 customer64 0
+check customer64 0
+cancel 75 2022 11 15 4 customer64 0
+cancel 109 2022 1 10 2 customer64 0
+reserveany 7 2022 1 28 6 customer64 0
+check customer64 0
+cancel 109 2022 12 31 5 customer64 0
+end
+customer17
+reserveblock 3 97 2023 7 31 10 customer17 0
+reserveany 4 2023 9 23 9 customer17 0
+reserveblock 6 13 2022 11 12 10 customer17 0
+reserveblock 10 124 2023 10 1 6 customer17 0
+reserveblock 2 116 2023 2 16 1 customer17 0
+reserveany 4 2023 6 21 10 customer17 0
+reserveany 4 2023 6 7 4 customer17 0
+check customer17 0
+check customer17 0
+end
+customer29
+reserveany 6 2023 4 12 8 customer29 0
+reserve 119 2023 1 6 1 customer29 0
+reserveblock 7 141 2022 3 4 1 customer29 0
+cancel 83 2022 12 31 4 customer29 0
+check customer29 0
+reserveany 7 2023 7 29 8 customer29 0
+end
+customer67
+reserveblock 2 69 2023 1 23 10 customer67 0
+reserveany 2 2022 4 4 10 customer67 0
+check customer67 0
+end
+customer68
+reserve 138 2023 7 10 8 customer68 0
+reserveany 4 2023 4 5 8 customer68 0
+reserve 83 2022 8 1 6 customer68 0
+reserve 76 2023 1 24 4 customer68 0
+cancelany 2 2023 2 10 6 customer68 0
+cancelblock 3 109 2022 1 10 8 customer68 0
+end
+customer69
+reserveany 9 2023 12 26 5 customer69 0
+reserveblock 7 113 2022 12 29 4 customer69 0
+reserveblock 3 29 2023 10 29 2 customer69 0
+end
+customer70
+reserveany 4 2022 7 25 6 customer70 0
+reserveany 4 2023 12 1 6 customer70 0
+reserve 130 2023 3 9 5 customer70 0
+reserveany 5 2023 3 27 8 customer70 0
+check customer70 0
+end
+customer26
+reserveblock 9 87 2023 3 9 6 customer26 0
+reserveblock 4 33 2022 11 29 6 customer26 0
+end
+customer72
+reserveblock 5 45 2022 12 6 5 customer72 0
+reserveany 5 2022 6 1 6 customer72 0
+cancelblock 10 69 2023 2 5 4 customer72 0
+cancel 62 2023 2 7 5 customer72 0
+reserve 122 2023 7 30 6 customer72 0
+cancelblock 3 121 2023 2 15 1 customer72 0
+cancelblock 9 128 2022 4 24 2 customer72 0
+reserve 83 2023 4 24 9 customer72 0
+check customer72 0
+end
+customer33
+reserve 94 2023 3 14 8 customer33 0
+end
+customer54
+reserve 64 2023 5 2 2 customer54 0
+reserveany 8 2022 2 23 8 customer54 0
+reserveany 4 2023 4 9 4 customer54 0
+reserveblock 9 42 2022 7 25 8 customer54 0
+end
+customer75
+reserveblock 5 102 2023 11 24 6 customer75 0
+reserveany 10 2023 4 18 9 customer75 0
+cancel 48 2022 12 19 5 customer75 0
+cancelblock 5 103 2022 12 19 3 customer75 0
+cancelblock 9 128 2023 11 2 3 customer75 0
+reserveany 5 2023 12 4 3 customer75 0
+reserve 86 2023 9 13 1 customer75 0
+reserveany 7 2022 7 25 9 customer75 0
+reserveany 9 2022 9 18 3 customer75 0
+reserve 102 2022 12 30 9 customer75 0
+end
+customer76
+reserveblock 6 74 2022 5 5 6 customer76 0
+reserve 120 2023 7 24 9 customer76 0
+reserve 28 2023 10 18 2 customer76 0
+reserveany 9 2023 4 12 8 customer76 0
+reserveany 7 2023 12 14 3 customer76 0
+cancel 113 2022 7 14 1 customer76 0
+end
+customer42
+reserve 68 2023 2 24 1 customer42 0
+reserveblock 2 46 2022 2 16 6 customer42 0
+check customer42 0
+cancel 68 2023 1 30 1 customer42 0
+cancelblock 8 83 2023 4 24 6 customer42 0
+check customer42 0
+end
+customer78
+reserve 40 2023 5 23 10 customer78 0
+reserve 26 2023 12 25 1 customer78 0
+end
+customer79
+reserveany 9 2022 9 28 10 customer79 0
+reserveany 3 2023 3 9 8 customer79 0
+end
+customer80
+reserveblock 7 122 2023 9 28 4 customer80 0
+reserveany 9 2022 1 3 9 customer80 0
+reserveany 9 2023 7 25 3 customer80 0
+end
+customer81
+reserveblock 4 131 2022 10 1 4 customer81 0
+reserve 124 2023 9 2 3 customer81 0
+end
+customer32
+reserveblock 3 60 2023 9 20 7 customer32 0
+reserveblock 5 98 2022 2 6 10 customer32 0
+reserveblock 5 96 2022 8 7 6 customer32 0
+reserveblock 1 105 2023 7 10 8 customer32 0
+reserve 39 2022 8 31 3 customer32 0
+cancelany 10 2023 9 4 6 customer32 0
+cancelblock 7 76 2023 3 16 4 customer32 0
+cancelany 7 2023 2 15 3 customer32 0
+reserve 80 2023 4 25 3 customer32 0
+end
+customer83
+reserve 119 2022 5 20 10 customer83 0
+reserve 18 2023 2 20 2 customer83 0
+check customer83 0
+end
+customer25
+reserveblock 3 86 2022 1 1 1 customer25 0
+end
+customer85
+reserve 28 2022 1 20 7 customer85 0
+reserve 9 2022 6 29 2 customer85 0
+cancelany 6 2022 10 12 1 customer85 0
+reserveblock 4 60 2022 12 12 10 customer85 0
+cancelblock 4 118 2022 1 8 5 customer85 0
+cancelblock 1 76 2023 1 24 4 customer85 0
+check customer85 0
+reserve 98 2023 2 13 1 customer85 0
+cancel 115 2022 4 11 9 customer85 0
+check customer85 0
+end
+customer86
+reserveblock 7 122 2023 12 6 9 customer86 0
+reserveany 2 2022 4 8 5 customer86 0
+check customer86 0
+reserveblock 8 78 2023 11 30 8 customer86 0
+cancelblock 7 112 2023 7 28 1 customer86 0
+reserveblock 6 9 2022 9 7 1 customer86 0
+reserveblock 5 15 2022 7 25 4 customer86 0
+check customer86 0
+end
+customer87
+reserveblock 6 72 2022 9 26 9 customer87 0
+reserveany 5 2022 9 18 5 customer87 0
+reserve 138 2023 3 26 7 customer87 0
+cancelany 6 2022 10 27 3 customer87 0
+reserveany 10 2023 11 2 7 customer87 0
+cancelany 3 2022 12 19 2 customer87 0
+cancelblock 8 103 2022 7 25 3 customer87 0
+end
+customer88
+reserveblock 8 30 2023 7 12 1 customer88 0
+reserveany 9 2022 11 19 10 customer88 0
+reserve 119 2022 4 2 4 customer88 0
+cancelblock 7 51 2023 6 21 1 customer88 0
+cancelblock 1 116 2023 6 26 1 customer88 0
+reserve 38 2023 9 15 10 customer88 0
+reserveany 8 2023 2 17 8 customer88 0
+cancel 113 2022 7 14 1 customer88 0
+cancel 115 2023 7 25 3 customer88 0
+cancelblock 10 83 2022 8 1 3 customer88 0
+end
+customer89
+reserveany 4 2023 3 29 4 customer89 0
+reserveany 2 2022 10 21 1 customer89 0
+check customer89 0
+cancelany 2 2022 11 29 5 customer89 0
+check customer89 0
+check customer89 0
+cancel 43 2023 12 7 8 customer89 0
+end
+customer90
+reserveblock 10 122 2023 3 19 2 customer90 0
+reserveany 3 2023 11 27 2 customer90 0
+reserveany 3 2023 12 26 1 customer90 0
+reserveany 3 2023 5 14 6 customer90 0
+reserveany 2 2022 11 16 10 customer90 0
+reserve 49 2022 9 9 6 customer90 0
+reserve 27 2022 1 28 2 customer90 0
+cancel 137 2023 6 4 3 customer90 0
+check customer90 0
+cancel 23 2022 7 25 2 customer90 0
+end
+customer91
+reserveany 3 2023 10 19 4 customer91 0
+reserveblock 3 101 2023 11 27 3 customer91 0
+cancel 9 2023 11 20 9 customer91 0
+check customer91 0
+reserveany 2 2023 12 22 5 customer91 0
+cancel 37 2022 11 20 2 customer91 0
+reserveblock 10 20 2022 10 30 7 customer91 0
+reserveany 10 2022 4 4 5 customer91 0
+check customer91 0
+reserve 12 2022 2 3 1 customer91 0
+end
+customer92
+reserve 136 2023 6 23 9 customer92 0
+reserve 7 2023 9 8 8 customer92 0
+end
+customer93
+reserve 7 2022 3 10 3 customer93 0
+reserveany 9 2022 11 8 10 customer93 0
+cancelany 3 2022 3 30 1 customer93 0
+check customer93 0
+cancelblock 9 74 2022 5 5 2 customer93 0
+reserveblock 9 56 2023 4 15 6 customer93 0
+cancelany 5 2022 3 5 1 customer93 0
+cancelany 8 2022 11 19 2 customer93 0
+end
+customer94
+reserve 82 2022 7 28 9 customer94 0
+reserveany 8 2023 8 17 7 customer94 0
+cancelany 6 2023 7 25 1 customer94 0
+check customer94 0
+cancelany 6 2022 11 12 2 customer94 0
+end
+customer54
+reserve 131 2022 1 14 7 customer54 0
+reserveany 4 2022 8 15 1 customer54 0
+cancel 23 2023 7 3 4 customer54 0
+end
+customer96
+reserveblock 5 5 2023 5 17 10 customer96 0
+reserve 55 2022 5 5 10 customer96 0
+reserve 134 2022 3 31 5 customer96 0
+cancelany 7 2022 11 20 1 customer96 0
+reserveblock 6 106 2022 4 13 2 customer96 0
+reserveblock 1 94 2022 12 9 10 customer96 0
+check customer96 0
+check customer96 0
+reserve 93 2022 6 21 6 customer96 0
+end
+customer97
+reserveblock 8 121 2022 11 30 10 customer97 0
+reserveany 3 2023 11 3 8 customer97 0
+reserveany 3 2023 4 23 4 customer97 0
+end
+customer98
+reserveblock 2 11 2022 3 31 7 customer98 0
+reserveblock 3 30 2022 7 23 10 customer98 0
+cancel 24 2022 7 15 4 customer98 0
+reserveblock 2 114 2023 6 12 10 customer98 0
+end
+customer99
+reserveblock 4 69 2022 6 18 3 customer99 0
+reserveany 7 2022 10 1 4 customer99 0
+reserveany 10 2022 11 25 1 customer99 0
+reserveblock 3 47 2023 3 20 2 customer99 0
+reserve 105 2023 12 8 1 customer99 0
+reserveblock 4 49 2022 2 11 9 customer99 0
+check customer99 0
+check customer99 0
+end
+customer100
+reserveblock 2 15 2022 6 5 7 customer100 0
+reserveany 1 2022 9 24 1 customer100 0
+cancelblock 5 102 2022 12 30 4 customer100 0
+cancelblock 6 48 2023 2 15 1 customer100 0
+end
+customer101
+reserve 138 2023 10 18 2 customer101 0
+reserveblock 5 77 2022 11 4 9 customer101 0
+reserveblock 10 46 2022 1 4 2 customer101 0
+check customer101 0
+cancel 1 2022 10 27 2 customer101 0
+reserveany 7 2022 11 3 8 customer101 0
+cancel 108 2022 7 5 2 customer101 0
+check customer101 0
+check customer101 0
+reserveblock 7 44 2022 10 22 10 customer101 0
+end
+customer102
+reserveblock 7 3 2022 3 16 3 customer102 0
+reserve 68 2022 6 17 5 customer102 0
+reserveblock 3 110 2022 12 6 4 customer102 0
+reserve 120 2023 11 25 6 customer102 0
+cancel 14 2022 11 20 1 customer102 0
+reserve 85 2023 11 2 3 customer102 0
+cancelblock 10 24 2022 4 15 6 customer102 0
+reserveblock 3 130 2022 10 14 4 customer102 0
+cancelany 1 2023 9 13 1 customer102 0
+cancel 47 2023 11 29 3 customer102 0
+end
+customer103
+reserveblock 3 26 2023 8 5 5 customer103 0
+reserve 28 2022 12 15 7 customer103 0
+cancelblock 1 46 2023 1 25 1 customer103 0
+reserveblock 10 129 2023 5 2 4 customer103 0
+reserve 59 2022 10 23 3 customer103 0
+cancelany 5 2022 5 11 9 customer103 0
+reserveblock 5 72 2023 3 24 10 customer103 0
+reserve 3 2022 5 29 7 customer103 0
+end
+customer104
+reserve 14 2023 12 16 3 customer104 0
+reserve 95 2022 6 16 1 customer104 0
+end
+customer105
+reserveany 1 2023 4 5 5 customer105 0
+end
+customer106
+reserveany 8 2022 5 13 5 customer106 0
+reserveany 5 2023 3 23 7 customer106 0
+reserveany 1 2023 2 7 7 customer106 0
+cancel 29 2023 10 29 1 customer106 0
+check customer106 0
+cancelblock 3 15 2022 7 25 4 customer106 0
+reserveblock 10 71 2023 11 12 2 customer106 0
+end
+customer107
+reserveany 10 2023 5 21 10 customer107 0
+reserveblock 4 49 2023 12 2 7 customer107 0
+check customer107 0
+cancelany 7 2023 4 15 5 customer107 0
+cancelblock 6 102 2022 12 30 3 customer107 0
+cancel 138 2023 7 10 5 customer107 0
+reserveblock 2 38 2023 6 1 6 customer107 0
+reserveblock 9 115 2022 11 17 4 customer107 0
+cancelblock 5 121 2022 11 30 7 customer107 0
+reserve 75 2022 3 20 9 customer107 0
+end
+customer62
+reserve 34 2023 7 31 4 customer62 0
+reserveblock 4 65 2023 10 22 1 customer62 0
+reserveblock 10 88 2023 2 24 9 customer62 0
+cancel 74 2023 5 19 2 customer62 0
+cancelblock 7 117 2022 5 11 2 customer62 0
+reserveany 2 2023 1 14 10 customer62 0
+end
+customer109
+reserveblock 9 52 2023 12 21 8 customer109 0
+reserveany 8 2022 12 17 9 customer109 0
+cancel 49 2022 9 9 4 customer109 0
+cancelany 10 2023 1 6 1 customer109 0
+cancelblock 5 46 2023 1 25 1 customer109 0
+reserve 79 2022 6 25 10 customer109 0
+cancel 43 2022 12 19 2 customer109 0
+cancelblock 3 130 2022 10 14 3 customer109 0
+end
+customer110
+reserveany 10 2023 7 25 8 customer110 0
+reserveblock 8 129 2022 6 11 7 customer110 0
+cancel 23 2023 9 8 1 customer110 0
+cancelany 10 2023 2 15 3 customer110 0
+end
+customer111
+reserveany 1 2022 12 27 7 customer111 0
+reserveblock 7 22 2023 8 23 7 customer111 0
+check customer111 0
+reserve 19 2022 12 9 4 customer111 0
+end
+customer112
+reserveblock 5 84 2023 10 7 3 customer112 0
+reserveany 2 2023 5 2 4 customer112 0
+check customer112 0
+cancel 102 2023 9 28 4 customer112 0
+check customer112 0
+end
+customer86
+reserveany 10 2023 12 17 2 customer86 0
+reserve 25 2023 12 1 4 customer86 0
+cancelany 3 2023 9 8 1 customer86 0
+cancelany 8 2022 8 9 1 customer86 0
+check customer86 0
+reserve 122 2022 8 3 8 customer86 0
+end
+customer114
+reserveblock 6 125 2023 12 29 1 customer114 0
+reserve 69 2023 12 22 5 customer114 0
+reserveblock 8 1 2022 2 8 6 customer114 0
+cancelblock 6 23 2022 7 15 4 customer114 0
+cancel 72 2023 3 24 10 customer114 0
+check customer114 0
+check customer114 0
+cancelblock 1 87 2022 11 20 2 customer114 0
+reserve 140 2023 4 26 1 customer114 0
+reserveany 3 2022 5 16 9 customer114 0
+end
+customer115
+reserveblock 10 62 2022 8 22 3 customer115 0
+end
+customer116
+reserveany 5 2023 2 14 4 customer116 0
+reserve 75 2023 5 19 5 customer116 0
+cancelany 8 2022 3 4 1 customer116 0
+cancelblock 8 108 2022 7 5 2 customer116 0
+check customer116 0
+end
+customer117
+reserveany 1 2022 1 16 2 customer117 0
+reserveblock 5 47 2023 5 31 3 customer117 0
+reserveblock 4 139 2023 9 25 7 customer117 0
+end
+customer118
+reserve 74 2022 5 5 4 customer118 0
+reserveblock 4 90 2023 7 30 5 customer118 0
+reserveblock 6 45 2023 6 5 4 customer118 0
+cancel 70 2023 12 17 1 customer118 0
+end
+customer119
+reserveblock 8 115 2023 10 12 6 customer119 0
+reserve 8 2023 7 3 2 customer119 0
+reserveblock 6 67 2023 11 19 3 customer119 0
+reserve 40 2022 5 10 7 customer119 0
+cancelblock 2 39 2022 12 19 3 customer119 0
+reserveany 2 2023 4 30 5 customer119 0
+reserveany 9 2022 8 17 1 customer119 0
+end
+customer120
+reserveblock 5 103 2022 12 12 6 customer120 0
+end
+customer121
+reserveany 10 2022 10 6 8 customer121 0
+reserve 94 2023 5 27 10 customer121 0
+cancelany 9 2022 12 29 2 customer121 0
+cancelany 2 2023 3 27 4 customer121 0
+reserveany 9 2023 8 5 3 customer121 0
+reserveblock 3 90 2022 6 25 9 customer121 0
+reserveblock 10 90 2022 12 11 9 customer121 0
+cancelany 7 2023 5 31 6 customer121 0
+end
+customer122
+reserveany 5 2022 5 17 6 customer122 0
+reserve 64 2022 6 5 8 customer122 0
+cancel 141 2022 2 22 5 customer122 0
+reserve 12 2023 12 19 7 customer122 0
+cancelany 6 2022 3 5 5 customer122 0
+end
+customer123
+reserveblock 3 91 2023 6 16 2 customer123 0
+end
+customer124
+reserve 89 2023 5 22 8 customer124 0
+reserve 75 2022 8 29 5 customer124 0
+cancel 137 2023 3 9 6 customer124 0
+check customer124 0
+cancel 128 2023 12 14 3 customer124 0
+end
+customer125
+reserve 39 2023 11 11 10 customer125 0
+reserve 28 2023 3 21 9 customer125 0
+check customer125 0
+cancelblock 10 141 2022 3 4 1 customer125 0
+check customer125 0
+reserve 114 2023 10 23 8 customer125 0
+end
+customer126
+reserve 23 2022 12 31 2 customer126 0
+reserve 52 2022 7 18 5 customer126 0
+cancelany 10 2023 5 19 2 customer126 0
+end
+customer127
+reserve 75 2022 4 23 10 customer127 0
+reserveany 3 2022 5 8 1 customer127 0
+reserveblock 5 33 2023 2 13 1 customer127 0
+cancel 125 2022 11 19 1 customer127 0
+cancelany 6 2022 3 4 1 customer127 0
+reserveany 10 2023 9 29 6 customer127 0
+reserveany 9 2023 3 29 1 customer127 0
+cancelblock 4 121 2022 11 30 1 customer127 0
+cancelblock 9 16 2022 2 13 2 customer127 0
+end
+customer128
+reserve 110 2023 12 22 6 customer128 0
+reserveblock 4 68 2023 1 1 9 customer128 0
+reserveblock 9 86 2022 3 14 4 customer128 0
+reserveany 9 2022 3 20 10 customer128 0
+cancelblock 3 26 2023 6 2 1 customer128 0
+cancel 34 2023 4 19 2 customer128 0
+cancel 30 2023 4 12 5 customer128 0
+cancelblock 5 111 2023 2 24 1 customer128 0
+end
+customer66
+reserve 71 2023 5 27 5 customer66 0
+reserve 75 2023 5 14 4 customer66 0
+check customer66 0
+end
+customer130
+reserveblock 4 27 2022 6 25 7 customer130 0
+reserveblock 5 53 2022 9 21 9 customer130 0
+cancelblock 8 109 2022 1 10 1 customer130 0
+reserveany 3 2022 6 10 10 customer130 0
+end
+customer131
+reserveany 7 2022 1 24 8 customer131 0
+reserveblock 8 138 2023 4 18 7 customer131 0
+cancelblock 3 22 2023 2 7 2 customer131 0
+end
+customer132
+reserveany 5 2022 9 8 4 customer132 0
+reserve 50 2022 10 23 5 customer132 0
+reserveany 2 2022 12 8 5 customer132 0
+end
+customer133
+reserveblock 6 60 2023 2 25 3 customer133 0
+reserveany 3 2022 6 23 4 customer133 0
+cancel 9 2023 11 20 1 customer133 0
+cancelblock 4 9 2023 11 20 8 customer133 0
+cancelany 4 2023 2 14 5 customer133 0
+end
+customer134
+reserveany 3 2023 12 16 10 customer134 0
+reserve 19 2022 8 11 8 customer134 0
+end
+customer135
+reserve 139 2022 12 18 9 customer135 0
+reserve 82 2022 11 10 2 customer135 0
+reserve 22 2022 8 5 8 customer135 0
+cancelany 1 2023 8 3 1 customer135 0
+reserveblock 1 99 2023 8 27 1 customer135 0
+cancelany 7 2023 2 7 1 customer135 0
+end
+customer136
+reserve 69 2022 8 23 2 customer136 0
+reserveany 1 2023 10 19 8 customer136 0
+check customer136 0
+reserve 72 2023 12 10 1 customer136 0
+reserveany 6 2023 11 26 10 customer136 0
+check customer136 0
+cancel 104 2022 11 20 6 customer136 0
+end
+customer137
+reserveblock 3 57 2022 11 26 4 customer137 0
+reserveblock 8 66 2022 5 8 4 customer137 0
+reserveblock 8 18 2022 4 19 5 customer137 0
+cancelany 3 2023 2 15 1 customer137 0
+end
+customer131
+reserveblock 8 12 2023 9 22 1 customer131 0
+reserveany 2 2023 1 8 8 customer131 0
+cancelany 6 2022 3 10 4 customer131 0
+reserveblock 5 132 2023 1 30 6 customer131 0
+end
+customer139
+reserveblock 6 41 2023 3 5 3 customer139 0
+reserveany 10 2023 10 15 2 customer139 0
+reserveblock 2 129 2022 12 9 1 customer139 0
+end
+customer140
+reserveany 6 2022 6 6 8 customer140 0
+reserveblock 9 62 2023 9 25 1 customer140 0
+cancelblock 1 22 2023 2 7 6 customer140 0
+reserveblock 8 55 2022 9 3 5 customer140 0
+cancelblock 4 26 2022 10 6 6 customer140 0
+check customer140 0
+end
+customer111
+reserveblock 7 125 2023 3 24 7 customer111 0
+reserveblock 4 52 2022 3 27 5 customer111 0
+reserveany 2 2023 5 10 5 customer111 0
+cancelblock 3 80 2023 4 25 1 customer111 0
+check customer111 0
+reserveblock 1 45 2023 2 26 3 customer111 0
+cancelany 5 2022 7 25 1 customer111 0
+reserve 44 2022 5 13 8 customer111 0
+reserveblock 2 4 2022 9 24 1 customer111 0
+reserveblock 4 124 2023 7 21 6 customer111 0
+end
+customer142
+reserve 130 2022 12 21 9 customer142 0
+reserveblock 9 132 2023 1 24 10 customer142 0
+end
+customer143
+reserveany 1 2023 6 13 2 customer143 0
+reserve 109 2023 3 8 9 customer143 0
+end
+customer144
+reserveblock 2 122 2023 11 15 8 customer144 0
+reserveblock 10 59 2022 12 18 3 customer144 0
+reserveblock 5 77 2023 3 10 6 customer144 0
+cancelany 6 2023 8 5 4 customer144 0
+check customer144 0
+cancelany 8 2022 3 5 1 customer144 0
+reserve 42 2022 5 29 8 customer144 0
+reserveany 6 2022 10 4 1 customer144 0
+reserveany 8 2022 11 18 3 customer144 0
+check customer144 0
+end
+customer145
+reserveany 3 2023 2 8 10 customer145 0
+end
+customer146
+reserveany 10 2022 3 30 10 customer146 0
+reserveany 8 2023 11 18 9 customer146 0
+end
+customer147
+reserveblock 5 10 2022 7 7 9 customer147 0
+reserveany 10 2022 1 12 2 customer147 0
+check customer147 0
+check customer147 0
+cancel 22 2022 1 24 7 customer147 0
+cancel 74 2022 5 5 1 customer147 0
+end
+customer148
+reserve 79 2022 10 22 6 customer148 0
+reserveany 4 2023 1 17 7 customer148 0
+cancelany 3 2022 10 6 3 customer148 0
+reserve 10 2022 2 2 10 customer148 0
+cancel 89 2022 11 16 2 customer148 0
+cancelany 7 2023 7 4 2 customer148 0
+reserve 137 2023 10 2 7 customer148 0
+reserve 13 2022 11 27 2 customer148 0
+end
+customer149
+reserve 86 2022 4 24 7 customer149 0
+reserveany 5 2022 7 24 10 customer149 0
+cancelblock 5 88 2023 9 26 1 customer149 0
+cancelblock 6 121 2022 12 25 4 customer149 0
+end
+customer150
+reserve 101 2023 9 25 3 customer150 0
+reserveblock 1 103 2022 1 25 6 customer150 0
+cancelany 4 2022 2 11 9 customer150 0
+cancelany 6 2022 11 20 1 customer150 0
+reserve 138 2022 4 6 10 customer150 0
+end
+customer151
+reserve 69 2023 6 19 1 customer151 0
+reserveblock 4 68 2023 2 16 2 customer151 0
+cancel 52 2022 6 10 4 customer151 0
+reserveany 2 2023 10 31 9 customer151 0
+cancelany 2 2022 3 2 1 customer151 0
+end
+customer152
+reserveblock 1 115 2023 9 13 9 customer152 0
+reserveany 9 2023 1 14 10 customer152 0
+reserveblock 3 89 2023 1 13 4 customer152 0
+reserve 56 2022 7 22 6 customer152 0
+reserveany 10 2023 5 26 5 customer152 0
+end
+customer153
+reserveany 5 2023 3 22 5 customer153 0
+reserveany 7 2022 12 10 4 customer153 0
+cancel 93 2023 3 22 1 customer153 0
+reserveany 5 2022 9 4 6 customer153 0
+check customer153 0
+cancelany 5 2022 12 29 3 customer153 0
+end
+customer154
+reserveblock 2 18 2023 11 23 5 customer154 0
+reserveany 1 2022 2 9 2 customer154 0
+cancelany 8 2023 3 9 2 customer154 0
+reserveany 7 2022 5 12 9 customer154 0
+reserveany 9 2022 1 4 3 customer154 0
+cancel 22 2022 9 8 3 customer154 0
+reserveblock 4 22 2023 1 20 2 customer154 0
+end
+customer155
+reserve 80 2022 4 4 2 customer155 0
+reserveany 3 2023 11 2 10 customer155 0
+cancelblock 2 133 2023 2 15 1 customer155 0
+reserveblock 2 22 2023 9 14 9 customer155 0
+end
+customer156
+reserve 26 2023 2 15 5 customer156 0
+reserve 69 2023 8 12 10 customer156 0
+cancel 34 2023 4 19 2 customer156 0
+reserveany 8 2022 3 9 2 customer156 0
+cancel 60 2023 2 10 8 customer156 0
+cancel 38 2023 9 15 10 customer156 0
+reserveany 9 2023 12 29 1 customer156 0
+end
+customer157
+reserveany 1 2023 1 14 8 customer157 0
+reserveblock 7 58 2023 3 13 7 customer157 0
+reserveblock 9 43 2023 9 2 3 customer157 0
+check customer157 0
+check customer157 0
+end
+customer158
+reserveany 10 2022 10 28 8 customer158 0
+reserve 51 2023 6 30 9 customer158 0
+cancel 135 2022 1 8 1 customer158 0
+reserve 93 2023 10 12 7 customer158 0
+check customer158 0
+check customer158 0
+reserveany 5 2023 2 1 5 customer158 0
+reserve 36 2022 6 10 8 customer158 0
+end
+customer159
+reserve 79 2023 1 10 3 customer159 0
+reserveany 7 2022 1 13 4 customer159 0
+cancelblock 10 130 2023 8 28 6 customer159 0
+cancelblock 8 83 2023 7 25 6 customer159 0
+reserve 58 2023 5 31 8 customer159 0
+reserveblock 3 40 2023 9 23 10 customer159 0
+end
+customer160
+reserveany 10 2023 9 5 9 customer160 0
+reserveblock 3 88 2022 5 14 4 customer160 0
+reserve 5 2023 4 28 6 customer160 0
+reserveany 10 2022 4 22 10 customer160 0
+reserveany 3 2022 6 18 4 customer160 0
+check customer160 0
+cancel 81 2023 12 13 1 customer160 0
+cancel 18 2023 12 16 6 customer160 0
+cancelany 7 2023 2 7 1 customer160 0
+end
+customer161
+reserveblock 6 66 2022 8 15 4 customer161 0
+reserveblock 2 16 2022 6 30 4 customer161 0
+cancelany 8 2022 1 1 1 customer161 0
+reserveany 9 2022 7 14 6 customer161 0
+cancelany 6 2022 7 5 2 customer161 0
+end
+customer162
+reserve 5 2022 7 2 6 customer162 0
+reserveany 6 2022 2 15 7 customer162 0
+cancelblock 3 81 2023 12 13 1 customer162 0
+end
+customer163
+reserveany 7 2023 12 9 9 customer163 0
+end
+customer164
+reserveany 1 2022 2 7 3 customer164 0
+reserveany 7 2023 10 18 7 customer164 0
+cancelany 1 2022 3 2 1 customer164 0
+check customer164 0
+reserveblock 10 104 2023 8 10 8 customer164 0
+cancelany 10 2022 2 23 3 customer164 0
+reserveany 3 2023 5 28 9 customer164 0
+cancel 128 2023 7 28 1 customer164 0
+end
+customer165
+reserve 38 2022 6 25 6 customer165 0
+reserveany 3 2022 6 1 7 customer165 0
+check customer165 0
+cancelany 5 2023 5 13 3 customer165 0
+reserve 102 2022 10 30 1 customer165 0
+reserve 85 2022 7 16 2 customer165 0
+reserveany 6 2022 2 16 1 customer165 0
+end
+customer166
+reserveblock 10 86 2022 4 24 8 customer166 0
+end
+customer167
+reserve 111 2022 9 12 4 customer167 0
+reserveblock 1 58 2022 4 17 7 customer167 0
+cancel 130 2022 10 14 3 customer167 0
+reserveany 6 2022 1 22 3 customer167 0
+reserve 104 2022 3 24 2 customer167 0
+check customer167 0
+cancel 72 2022 9 26 7 customer167 0
+end
+customer168
+reserve 7 2022 1 27 5 customer168 0
+reserveany 3 2023 8 13 10 customer168 0
+cancel 47 2023 11 29 1 customer168 0
+cancelany 3 2023 8 3 1 customer168 0
+cancelblock 5 127 2022 4 1 2 customer168 0
+cancel 24 2022 4 15 2 customer168 0
+cancelblock 1 53 2022 9 21 8 customer168 0
+end
+customer169
+reserveblock 10 12 2022 4 17 3 customer169 0
+reserveblock 7 65 2023 4 27 6 customer169 0
+cancel 85 2022 7 16 2 customer169 0
+reserveany 7 2022 9 14 5 customer169 0
+cancelany 8 2022 8 22 2 customer169 0
+end
+customer170
+reserveblock 7 9 2023 11 19 4 customer170 0
+reserveblock 1 48 2023 4 28 3 customer170 0
+reserve 114 2022 11 16 4 customer170 0
+end
+customer171
+reserve 35 2022 4 14 4 customer171 0
+reserveblock 7 73 2023 11 6 8 customer171 0
+cancelany 9 2023 11 19 4 customer171 0
+reserve 52 2022 2 1 9 customer171 0
+cancelany 6 2023 9 23 2 customer171 0
+reserveany 3 2022 8 27 3 customer171 0
+reserveblock 7 84 2023 11 23 7 customer171 0
+end
+customer172
+reserveany 8 2022 7 11 4 customer172 0
+end
+customer173
+reserveblock 7 61 2022 1 5 5 customer173 0
+reserveany 1 2023 4 5 2 customer173 0
+end
+customer164
+reserveany 5 2022 2 10 6 customer164 0
+reserveblock 5 83 2023 9 26 8 customer164 0
+check customer164 0
+reserveany 5 2022 8 4 3 customer164 0
+reserve 73 2022 4 28 2 customer164 0
+check customer164 0
+cancelblock 10 35 2023 5 14 5 customer164 0
+check customer164 0
+end
+customer98
+reserveany 10 2022 9 17 8 customer98 0
+reserveany 1 2022 8 29 6 customer98 0
+reserveany 2 2022 6 26 1 customer98 0
+cancelany 8 2023 8 27 1 customer98 0
+reserveblock 1 125 2022 5 3 8 customer98 0
+reserveblock 5 133 2022 9 24 2 customer98 0
+check customer98 0
+reserveblock 2 59 2022 7 20 2 customer98 0
+reserveany 2 2023 6 16 10 customer98 0
+end
+customer176
+reserveblock 1 117 2023 9 22 4 customer176 0
+reserve 57 2022 5 2 8 customer176 0
+cancelblock 3 102 2023 9 28 2 customer176 0
+cancel 105 2022 6 29 1 customer176 0
+cancel 131 2023 1 4 4 customer176 0
+check customer176 0
+cancelany 9 2022 8 16 8 customer176 0
+reserve 39 2022 6 28 4 customer176 0
+end
+customer177
+reserveblock 3 21 2023 7 17 3 customer177 0
+reserve 68 2022 4 4 6 customer177 0
+end
+customer178
+reserveblock 3 54 2023 12 9 10 customer178 0
+reserveany 1 2022 11 8 8 customer178 0
+cancel 76 2023 1 24 1 customer178 0
+cancel 31 2022 9 25 1 customer178 0
+cancelany 10 2023 11 19 2 customer178 0
+reserveblock 4 137 2022 12 27 4 customer178 0
+cancel 9 2023 11 20 3 customer178 0
+cancelany 9 2023 9 13 1 customer178 0
+end
+customer179
+reserveblock 6 67 2023 8 19 3 customer179 0
+reserve 11 2023 8 25 1 customer179 0
+check customer179 0
+check customer179 0
+end
+customer180
+reserveblock 8 129 2022 2 27 10 customer180 0
+reserveblock 3 73 2023 10 12 10 customer180 0
+reserveany 3 2022 1 17 2 customer180 0
+cancel 12 2022 2 7 2 customer180 0
+end
+customer113
+reserveblock 2 9 2022 3 17 5 customer113 0
+reserveblock 4 83 2022 9 30 5 customer113 0
+cancelblock 7 43 2022 12 19 2 customer113 0
+check customer113 0
+cancelany 4 2023 5 31 4 customer113 0
+cancel 119 2022 5 20 2 customer113 0
+reserve 41 2022 7 2 10 customer113 0
+end
+customer182
+reserve 97 2022 1 21 5 customer182 0
+reserveblock 3 109 2023 10 17 10 customer182 0
+end
+customer183
+reserve 35 2022 7 7 6 customer183 0
+reserveblock 5 116 2023 6 18 2 customer183 0
+reserveany 4 2023 4 28 5 customer183 0
+cancelany 9 2023 11 27 2 customer183 0
+reserveblock 2 16 2023 11 7 10 customer183 0
+reserve 21 2023 12 25 4 customer183 0
+cancel 89 2022 12 10 3 customer183 0
+cancelblock 10 74 2022 3 5 1 customer183 0
+reserveblock 6 18 2022 3 3 3 customer183 0
+cancelany 3 2022 9 3 1 customer183 0
+end
+customer184
+reserveany 9 2023 10 3 1 customer184 0
+end
+customer185
+reserve 71 2023 5 14 8 customer185 0
+reserveany 9 2023 7 23 7 customer185 0
+end
+customer186
+reserve 69 2023 10 1 9 customer186 0
+end
+customer187
+reserveblock 4 13 2023 7 1 10 customer187 0
+reserveany 8 2023 8 7 6 customer187 0
+reserveblock 3 111 2022 1 7 5 customer187 0
+cancel 82 2022 7 28 9 customer187 0
+end
+customer188
+reserveblock 9 76 2023 3 31 2 customer188 0
+reserve 43 2023 8 7 7 customer188 0
+cancel 72 2023 3 24 4 customer188 0
+cancel 116 2023 6 18 2 customer188 0
+reserveblock 2 92 2023 8 22 5 customer188 0
+check customer188 0
+end
+customer189
+reserveblock 2 140 2023 7 10 8 customer189 0
+reserveblock 8 95 2022 11 13 10 customer189 0
+reserveany 5 2022 7 26 6 customer189 0
+check customer189 0
+reserveblock 5 122 2023 2 10 4 customer189 0
+reserveblock 2 66 2022 6 7 7 customer189 0
+cancel 141 2022 2 22 4 customer189 0
+check customer189 0
+end
+customer190
+reserveblock 2 25 2023 6 2 5 customer190 0
+reserve 78 2023 1 14 9 customer190 0
+cancelblock 4 34 2023 4 19 2 customer190 0
+reserveany 9 2023 7 19 6 customer190 0
+cancelblock 1 65 2023 4 27 5 customer190 0
+cancelany 10 2023 6 13 1 customer190 0
+end
+customer191
+reserve 70 2023 7 4 6 customer191 0
+reserveblock 2 99 2022 11 14 1 customer191 0
+cancelblock 8 80 2023 4 25 1 customer191 0
+end
+customer192
+reserve 61 2023 11 7 10 customer192 0
+reserveblock 5 9 2023 3 6 8 customer192 0
+end
+customer193
+reserve 33 2022 9 19 1 customer193 0
+reserveblock 10 58 2022 5 25 1 customer193 0
+reserve 98 2022 3 20 4 customer193 0
+cancelblock 7 139 2023 9 25 2 customer193 0
+reserve 63 2022 7 17 2 customer193 0
+reserve 50 2022 10 8 8 customer193 0
+cancelany 6 2022 12 1 4 customer193 0
+reserveany 3 2023 5 24 9 customer193 0
+end
+customer74
+reserveany 9 2022 3 29 6 customer74 0
+reserveany 3 2022 4 6 4 customer74 0
+end
+customer195
+reserveany 9 2023 12 8 5 customer195 0
+reserveblock 3 133 2023 5 30 5 customer195 0
+cancel 18 2022 4 19 4 customer195 0
+reserveany 1 2023 7 19 4 customer195 0
+end
+customer196
+reserveblock 8 25 2022 2 19 5 customer196 0
+reserve 55 2022 5 31 7 customer196 0
+check customer196 0
+cancelblock 6 87 2023 3 9 6 customer196 0
+check customer196 0
+reserve 40 2022 2 26 3 customer196 0
+cancelany 9 2023 9 26 1 customer196 0
+cancelblock 7 141 2022 3 4 1 customer196 0
+end
+customer197
+reserveany 2 2022 1 8 5 customer197 0
+reserveany 8 2023 8 9 4 customer197 0
+reserveany 10 2022 1 5 6 customer197 0
+cancel 40 2022 2 26 3 customer197 0
+end
+customer198
+reserve 113 2022 8 2 9 customer198 0
+reserveblock 1 17 2022 7 13 1 customer198 0
+cancel 33 2022 11 29 6 customer198 0
+reserveblock 10 43 2023 7 21 5 customer198 0
+end
+customer199
+reserveblock 2 16 2022 7 19 5 customer199 0
+reserveany 1 2023 4 8 3 customer199 0
+reserve 49 2022 9 13 8 customer199 0
+end
+customer200
+reserveblock 9 94 2022 5 9 7 customer200 0
+reserve 12 2023 8 16 8 customer200 0
+cancelany 3 2022 12 7 6 customer200 0
+cancel 128 2023 7 28 3 customer200 0
+reserve 51 2023 1 16 2 customer200 0
+reserveblock 4 62 2022 4 10 8 customer200 0
+cancelany 3 2022 4 22 3 customer200 0
+cancel 60 2023 2 25 3 customer200 0
+cancelblock 4 128 2023 7 28 3 customer200 0
+cancelany 2 2023 6 13 1 customer200 0
+end
+customer201
+reserveblock 5 61 2022 1 29 3 customer201 0
+reserveblock 4 20 2023 12 15 5 customer201 0
+check customer201 0
+check customer201 0
+reserve 81 2022 1 13 9 customer201 0
+cancel 37 2022 11 20 1 customer201 0
+end
+customer202
+reserveblock 6 135 2023 7 26 5 customer202 0
+reserve 53 2023 8 1 7 customer202 0
+end
+customer203
+reserveblock 7 75 2023 6 11 5 customer203 0
+reserveblock 1 24 2022 9 23 8 customer203 0
+cancelblock 3 73 2023 11 29 1 customer203 0
+cancelany 5 2023 2 13 1 customer203 0
+reserve 47 2023 8 21 4 customer203 0
+cancelblock 3 15 2022 5 24 3 customer203 0
+reserve 132 2023 11 11 6 customer203 0
+cancel 109 2022 1 10 3 customer203 0
+cancelblock 9 48 2023 7 4 2 customer203 0
+cancel 83 2023 1 6 1 customer203 0
+end
+customer204
+reserveblock 6 111 2023 11 24 2 customer204 0
+reserveblock 10 104 2022 11 2 3 customer204 0
+reserve 24 2023 2 24 5 customer204 0
+cancelblock 1 38 2023 9 15 10 customer204 0
+reserve 66 2023 11 5 9 customer204 0
+cancelany 5 2022 2 19 4 customer204 0
+reserve 103 2022 11 20 4 customer204 0
+reserveblock 4 21 2022 5 6 5 customer204 0
+reserveany 4 2022 2 8 7 customer204 0
+end
+customer205
+reserve 37 2022 11 14 7 customer205 0
+reserve 60 2023 11 2 7 customer205 0
+reserve 46 2023 4 3 3 customer205 0
+cancel 80 2023 2 15 2 customer205 0
+cancel 83 2022 10 6 1 customer205 0
+cancelblock 4 66 2022 11 11 1 customer205 0
+reserveany 1 2022 5 7 5 customer205 0
+check customer205 0
+reserveblock 1 53 2022 4 8 7 customer205 0
+check customer205 0
+end
+customer147
+reserve 92 2022 9 19 10 customer147 0
+reserve 56 2023 3 26 1 customer147 0
+check customer147 0
+reserve 113 2023 1 17 3 customer147 0
+end
+customer207
+reserveblock 7 87 2023 5 22 3 customer207 0
+reserveblock 2 138 2022 8 30 8 customer207 0
+reserveany 8 2023 7 19 6 customer207 0
+cancelany 7 2022 3 20 4 customer207 0
+check customer207 0
+cancelblock 10 121 2022 12 25 4 customer207 0
+cancelany 10 2023 12 26 1 customer207 0
+end
+customer208
+reserveblock 5 51 2023 2 9 7 customer208 0
+reserveany 6 2022 6 20 4 customer208 0
+cancel 50 2022 7 14 6 customer208 0
+cancelblock 1 119 2022 5 20 4 customer208 0
+end
+customer209
+reserveany 4 2022 4 23 5 customer209 0
+end
+customer210
+reserveany 7 2023 1 24 4 customer210 0
+reserveany 10 2022 3 3 8 customer210 0
+cancelany 5 2023 2 25 1 customer210 0
+check customer210 0
+check customer210 0
+cancelany 4 2023 4 27 2 customer210 0
+reserveany 2 2022 2 22 6 customer210 0
+reserve 16 2022 8 22 8 customer210 0
+cancelany 9 2023 3 31 2 customer210 0
+end
+customer211
+reserveblock 4 28 2022 2 6 3 customer211 0
+reserveblock 10 131 2022 2 8 9 customer211 0
+reserveany 1 2023 9 29 5 customer211 0
+end
+customer212
+reserveany 1 2023 5 1 6 customer212 0
+reserveany 10 2023 8 26 8 customer212 0
+cancelany 3 2022 12 19 2 customer212 0
+cancel 49 2023 7 13 7 customer212 0
+cancelany 10 2023 3 8 1 customer212 0
+end
+customer213
+reserve 20 2022 3 8 1 customer213 0
+reserveany 8 2023 6 24 3 customer213 0
+end
+customer214
+reserve 61 2022 2 12 2 customer214 0
+reserveblock 9 107 2022 11 13 6 customer214 0
+end
+customer215
+reserveany 6 2023 7 22 3 customer215 0
+reserve 67 2023 10 13 1 customer215 0
+reserveblock 4 85 2022 11 27 8 customer215 0
+cancelany 7 2023 7 21 2 customer215 0
+cancelblock 9 19 2022 7 8 1 customer215 0
+end
+customer216
+reserve 115 2022 8 16 1 customer216 0
+reserveany 2 2023 11 2 4 customer216 0
+reserveblock 6 119 2023 2 28 9 customer216 0
+reserveany 5 2022 1 9 2 customer216 0
+reserve 41 2023 1 16 7 customer216 0
+reserve 44 2023 8 5 9 customer216 0
+reserveblock 9 27 2023 12 6 2 customer216 0
+reserve 82 2023 9 12 3 customer216 0
+check customer216 0
+end
+customer217
+reserve 48 2022 4 15 10 customer217 0
+reserveany 7 2022 4 20 1 customer217 0
+end
+customer218
+reserveany 1 2022 5 3 10 customer218 0
+end
+customer219
+reserve 105 2023 8 17 2 customer219 0
+reserve 67 2022 10 21 2 customer219 0
+end
+customer220
+reserveany 5 2022 4 16 4 customer220 0
+reserve 61 2023 4 30 6 customer220 0
+cancel 71 2023 5 14 1 customer220 0
+cancelblock 8 68 2022 6 17 1 customer220 0
+cancelblock 7 101 2022 3 3 1 customer220 0
+reserveblock 4 101 2022 7 29 8 customer220 0
+reserve 38 2022 10 30 5 customer220 0
+cancelany 9 2023 8 5 2 customer220 0
+end
+customer221
+reserveany 10 2022 9 27 1 customer221 0
+reserve 2 2022 2 25 5 customer221 0
+cancel 126 2022 3 5 1 customer221 0
+cancel 20 2022 12 19 9 customer221 0
+cancelany 2 2022 4 13 1 customer221 0
+cancelblock 7 61 2022 2 12 2 customer221 0
+reserveany 1 2022 8 18 5 customer221 0
+reserveblock 1 87 2023 9 19 4 customer221 0
+end
+customer222
+reserveblock 10 21 2023 12 10 2 customer222 0
+reserve 78 2022 10 27 1 customer222 0
+reserve 96 2023 9 8 1 customer222 0
+reserveblock 6 12 2022 6 25 10 customer222 0
+cancelany 9 2022 2 8 3 customer222 0
+cancelblock 3 69 2023 2 5 4 customer222 0
+reserveblock 1 5 2022 9 1 3 customer222 0
+cancel 16 2023 11 7 9 customer222 0
+end
+customer223
+reserveblock 7 31 2022 4 3 3 customer223 0
+reserve 74 2023 7 9 7 customer223 0
+cancelblock 6 53 2023 8 1 4 customer223 0
+check customer223 0
+reserveany 1 2023 10 2 5 customer223 0
+reserveany 8 2022 9 28 5 customer223 0
+check customer223 0
+cancel 26 2022 10 6 6 customer223 0
+cancelany 10 2023 12 29 1 customer223 0
+end
+customer224
+reserveblock 2 51 2023 6 2 8 customer224 0
+reserveany 1 2023 2 18 4 customer224 0
+reserve 104 2023 2 17 9 customer224 0
+cancel 73 2023 2 17 7 customer224 0
+end
+customer225
+reserveany 3 2023 11 24 9 customer225 0
+reserve 69 2023 7 30 10 customer225 0
+reserveany 4 2023 8 9 1 customer225 0
+cancelblock 1 104 2023 11 19 2 customer225 0
+cancel 132 2022 12 31 4 customer225 0
+check customer225 0
+reserveblock 8 34 2022 10 1 7 customer225 0
+reserve 107 2022 11 10 9 customer225 0
+reserveany 9 2022 6 14 3 customer225 0
+check customer225 0
+end
+customer226
+reserveany 9 2022 5 17 2 customer226 0
+reserveblock 9 56 2023 6 29 4 customer226 0
+reserveblock 2 74 2022 6 26 6 customer226 0
+cancelany 3 2023 7 4 1 customer226 0
+reserveblock 1 31 2023 4 26 8 customer226 0
+reserveany 10 2022 5 27 6 customer226 0
+check customer226 0
+reserveblock 4 109 2022 9 17 5 customer226 0
+cancel 71 2022 12 12 1 customer226 0
+end
+customer227
+reserveblock 8 52 2023 8 18 8 customer227 0
+reserveany 7 2023 12 11 4 customer227 0
+cancel 12 2023 12 19 6 customer227 0
+check customer227 0
+reserveblock 6 39 2022 8 13 3 customer227 0
+cancelblock 8 2 2023 5 13 2 customer227 0
+cancelany 5 2022 12 19 4 customer227 0
+reserveany 10 2022 3 2 2 customer227 0
+reserveany 6 2023 1 18 7 customer227 0
+end
+customer228
+reserve 112 2022 2 28 10 customer228 0
+reserve 42 2022 3 30 6 customer228 0
+reserveblock 5 27 2022 6 4 10 customer228 0
+check customer228 0
+reserve 123 2023 12 23 8 customer228 0
+end
+customer229
+reserveany 10 2022 5 10 6 customer229 0
+reserveany 8 2022 4 20 9 customer229 0
+reserve 35 2022 5 4 9 customer229 0
+cancelblock 3 128 2023 7 28 4 customer229 0
+end
+customer230
+reserve 104 2022 10 30 8 customer230 0
+reserveblock 5 102 2022 2 18 5 customer230 0
+reserve 90 2023 11 14 10 customer230 0
+cancel 45 2023 2 26 3 customer230 0
+reserveany 6 2023 3 14 6 customer230 0
+cancelany 4 2023 7 10 5 customer230 0
+cancelblock 1 27 2022 6 25 1 customer230 0
+reserveblock 5 87 2023 5 25 5 customer230 0
+cancelblock 1 121 2022 11 30 1 customer230 0
+end
+customer231
+reserve 36 2023 6 11 3 customer231 0
+reserve 97 2022 8 29 6 customer231 0
+check customer231 0
+check customer231 0
+cancelblock 7 45 2023 10 13 1 customer231 0
+reserve 28 2023 6 13 6 customer231 0
+reserveblock 10 40 2023 1 9 10 customer231 0
+reserve 81 2022 7 8 4 customer231 0
+reserveblock 8 49 2022 12 23 8 customer231 0
+reserve 84 2022 1 22 8 customer231 0
+end
+customer232
+reserve 20 2023 6 2 5 customer232 0
+reserveany 6 2022 6 6 3 customer232 0
+cancel 67 2023 10 13 1 customer232 0
+cancel 28 2022 1 20 4 customer232 0
+end
+customer233
+reserveany 3 2023 3 26 5 customer233 0
+reserveblock 6 3 2022 5 13 1 customer233 0
+reserveblock 4 28 2022 1 19 7 customer233 0
+cancel 46 2022 7 15 4 customer233 0
+end
+customer234
+reserveany 9 2022 9 21 3 customer234 0
+reserveblock 9 70 2022 4 27 10 customer234 0
+check customer234 0
+end
+customer235
+reserve 19 2022 8 1 8 customer235 0
+reserve 124 2022 12 24 8 customer235 0
+cancelany 10 2022 3 16 2 customer235 0
+check customer235 0
+cancelany 10 2022 12 27 2 customer235 0
+cancelblock 5 49 2022 2 11 5 customer235 0
+end
+customer39
+reserveany 2 2023 4 15 3 customer39 0
+reserveblock 8 33 2023 2 5 6 customer39 0
+check customer39 0
+cancel 125 2022 11 14 3 customer39 0
+reserve 39 2023 6 18 5 customer39 0
+end
+customer23
+reserveany 7 2023 12 31 1 customer23 0
+reserveany 6 2022 6 20 7 customer23 0
+reserve 91 2023 6 4 7 customer23 0
+reserveany 8 2022 1 28 9 customer23 0
+reserveblock 1 139 2023 7 25 9 customer23 0
+cancel 128 2023 7 28 2 customer23 0
+cancel 112 2023 6 26 3 customer23 0
+reserveblock 6 45 2022 4 17 3 customer23 0
+end
+customer238
+reserveblock 3 100 2022 11 30 10 customer238 0
+reserve 56 2023 4 12 10 customer238 0
+cancelany 2 2023 3 17 7 customer238 0
+cancelblock 4 87 2023 3 9 4 customer238 0
+reserveany 9 2022 3 25 5 customer238 0
+end
+customer79
+reserve 2 2023 2 8 9 customer79 0
+reserve 62 2022 4 26 7 customer79 0
+reserve 28 2022 3 9 9 customer79 0
+cancel 134 2023 8 21 3 customer79 0
+cancel 80 2022 4 4 2 customer79 0
+reserve 27 2023 12 20 7 customer79 0
+end
+customer240
+reserve 65 2022 10 6 3 customer240 0
+reserveany 8 2023 7 23 6 customer240 0
+end
+customer241
+reserve 69 2023 9 26 7 customer241 0
+reserve 113 2022 9 15 4 customer241 0
+check customer241 0
+reserveany 1 2023 9 22 9 customer241 0
+reserve 136 2023 4 10 9 customer241 0
+cancel 123 2023 12 23 8 customer241 0
+cancelany 3 2022 6 18 2 customer241 0
+reserve 115 2022 8 14 9 customer241 0
+reserve 23 2023 7 11 1 customer241 0
+reserve 101 2022 1 31 3 customer241 0
+end
+customer242
+reserveblock 4 107 2023 3 16 3 customer242 0
+reserveblock 1 95 2023 12 26 3 customer242 0
+cancelblock 3 104 2022 1 13 4 customer242 0
+reserve 45 2022 9 27 1 customer242 0
+cancelblock 5 96 2022 8 7 6 customer242 0
+cancelblock 4 66 2022 11 11 1 customer242 0
+cancel 22 2023 2 7 1 customer242 0
+end
+customer243
+reserve 68 2022 9 17 2 customer243 0
+reserve 80 2022 8 16 9 customer243 0
+check customer243 0
+reserve 63 2022 12 4 8 customer243 0
+reserveblock 1 140 2023 9 1 5 customer243 0
+reserve 71 2023 8 25 6 customer243 0
+end
+customer244
+reserveany 3 2023 1 24 10 customer244 0
+reserveblock 5 19 2022 8 30 10 customer244 0
+end
+customer245
+reserveany 2 2022 3 18 3 customer245 0
+reserve 90 2023 12 7 1 customer245 0
+cancelblock 7 40 2023 9 23 10 customer245 0
+reserveblock 10 56 2022 6 27 2 customer245 0
+cancelblock 10 22 2023 2 7 1 customer245 0
+check customer245 0
+cancelany 7 2022 5 4 9 customer245 0
+end
+customer246
+reserveblock 10 83 2022 4 25 9 customer246 0
+reserveblock 8 33 2022 12 15 1 customer246 0
+end
+customer247
+reserveblock 9 34 2022 11 22 9 customer247 0
+reserveany 7 2022 5 15 10 customer247 0
+reserveany 5 2022 6 27 10 customer247 0
+check customer247 0
+reserve 112 2022 8 31 4 customer247 0
+cancelblock 8 51 2023 6 21 1 customer247 0
+cancelany 1 2023 12 22 6 customer247 0
+cancel 33 2022 9 19 1 customer247 0
+reserveblock 2 106 2022 8 5 10 customer247 0
+end
+customer248
+reserve 40 2023 2 23 10 customer248 0
+reserve 92 2022 3 10 8 customer248 0
+reserveblock 1 65 2022 12 29 10 customer248 0
+end
+customer63
+reserveblock 8 124 2022 12 17 5 customer63 0
+reserveany 2 2023 1 16 5 customer63 0
+reserveblock 5 8 2023 7 23 6 customer63 0
+reserve 131 2022 3 10 5 customer63 0
+end
+customer250
+reserve 122 2023 10 7 3 customer250 0
+reserve 92 2022 2 26 9 customer250 0
+check customer250 0
+reserve 59 2022 11 27 3 customer250 0
+reserveblock 1 137 2023 11 19 6 customer250 0
+cancelblock 1 20 2022 8 14 1 customer250 0
+reserveany 4 2022 2 19 10 customer250 0
+cancelany 5 2022 11 8 6 customer250 0
+cancel 9 2023 11 19 3 customer250 0
+end
+customer251
+reserveblock 2 59 2022 11 3 10 customer251 0
+reserveblock 7 9 2022 3 17 5 customer251 0
+reserveblock 10 56 2022 12 27 9 customer251 0
+reserve 76 2022 1 3 9 customer251 0
+reserveblock 9 1 2022 2 28 5 customer251 0
+reserveany 4 2022 8 17 1 customer251 0
+check customer251 0
+reserve 78 2023 4 21 1 customer251 0
+reserveany 9 2023 7 28 3 customer251 0
+cancelblock 7 40 2023 8 9 1 customer251 0
+end
+customer252
+reserveblock 4 70 2023 2 14 7 customer252 0
+reserveblock 2 78 2022 9 15 5 customer252 0
+reserve 17 2023 12 9 8 customer252 0
+check customer252 0
+reserveany 10 2023 5 10 3 customer252 0
+reserveany 5 2023 9 8 9 customer252 0
+cancelblock 10 40 2022 2 26 3 customer252 0
+reserve 131 2023 7 25 5 customer252 0
+end
+customer253
+reserve 36 2023 11 13 5 customer253 0
+reserveany 1 2022 1 18 7 customer253 0
+reserveblock 1 74 2022 11 2 9 customer253 0
+cancel 53 2022 9 18 4 customer253 0
+reserve 78 2023 8 4 10 customer253 0
+cancelany 2 2023 9 23 8 customer253 0
+reserve 120 2023 11 4 9 customer253 0
+reserveany 1 2023 11 4 6 customer253 0
+reserveblock 9 11 2023 9 16 5 customer253 0
+end
+customer254
+reserve 63 2022 6 21 6 customer254 0
+reserve 81 2023 10 13 3 customer254 0
+reserveblock 6 115 2022 7 9 7 customer254 0
+cancelblock 1 46 2022 11 12 2 customer254 0
+reserveblock 6 95 2023 2 15 3 customer254 0
+cancelany 4 2022 6 21 3 customer254 0
 end
