@@ -132,10 +132,10 @@ class FileGenerate():
         if command == 'reserve' or command == 'reserveblock':
             request.append(random.randint(1, max(self.ids)))
         if command != 'check':
-            if re.match(r'cancel.*', command, 0):  # 对于cancel这一类的请求，年月日
+            if re.match(r'cancel.*', command, 0):  # 对于cancel这一类的请求，日期从前面的预约记录里选，而不采用随机生成的方式
 
-                index = random.choice(range(len(rsvList)))
-                while (rsvList[index][0] == 'check'):
+                index = random.choice(range(len(rsvList)))  # 随机选之前生成的某条请求
+                while (rsvList[index][0] == 'check'):   # 除去check这个没有日期的请求
                     index = random.choice(range(len(rsvList)))
                 room_id = 1
                 if re.match(r'.*block', rsvList[index][0], 0):
@@ -144,7 +144,8 @@ class FileGenerate():
                     room_id = random.randint(1, max(self.ids))
                 else:
                     room_id = rsvList[index][1]
-                request.append(room_id)
+                if command != 'cancelany':
+                    request.append(room_id)
                 year = rsvList[index][-6]
                 month = rsvList[index][-5]
                 day = rsvList[index][-4]
