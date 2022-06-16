@@ -26,11 +26,11 @@ int fd1, fd2;
 // extern定义，全局变量
 roomInfo_shm *roomInfo = NULL;
 reserveInfo_shm *reserveInfo = NULL;
-sem_t *roomSem;
+sem_t *mutexSem;
 sem_t *processSem = NULL;
 
 // 客人名字到他的预约信息的索引缓冲区
-name_index_Buff buff[BUFF_SIZE];
+// name_index_Buff buff[BUFF_SIZE];
 /*
     内部调用的函数
 */
@@ -64,6 +64,10 @@ void systemStart(const char *filepath) {
     // print_fileInput();
 }
 
+/**
+ * @brief 打印宾馆最后的预约信息
+ * 
+ */
 void print_stat() {
     printf("---------------Hotel stat-----------------\n");
     printf("------------------------------------------\n");
@@ -241,13 +245,13 @@ void system_init() {
                                           MAP_SHARED, fd2, 0);
     memset(reserveInfo, 0, sizeof(reserveInfo));
 
-    sem_unlink(ROOM_INFO_SEM);
+    sem_unlink(MUTEX_SEM);
     sem_unlink(PROCESS_NUM_SEM);
 
     // 创建并打开信号量
     // 该信号量被用于修改roomInfo时
-    roomSem = sem_open(ROOM_INFO_SEM, O_CREAT, S_IRUSR | S_IWUSR, 1);
-    // 该信号量用于限制最大并法线程数
+    mutexSem = sem_open(MUTEX_SEM, O_CREAT, S_IRUSR | S_IWUSR, 1);
+    // 该信号量用于限制最大并发进程数
     processSem = sem_open(PROCESS_NUM_SEM, O_CREAT, S_IRUSR | S_IWUSR, MAX_NUM_THREAD);
 
     roomInfo_init(roomInfo);
@@ -256,12 +260,12 @@ void system_init() {
 void system_exit() {
     shm_unlink(ROOM_INFO_SHM);
     shm_unlink(RESERVE_INFO_SHM);
-    sem_unlink(ROOM_INFO_SEM);
+    sem_unlink(MUTEX_SEM);
     sem_unlink(PROCESS_NUM_SEM);
 }
 
 /**
- * @brief 打印房间信息（共享内存区），房间信息结构体改变，函数弃用
+ * @brief 打印房间信息（共享内存区）......房间信息结构体改变，函数弃用
  */
 // void print_roomInfo() {
 //     printf("------------------\n");
