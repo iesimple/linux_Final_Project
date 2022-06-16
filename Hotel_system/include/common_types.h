@@ -57,11 +57,11 @@ struct customerRequest
  *
  */
 
-typedef struct
-{
-    char name[MAX_LEN_NAME];
-    int index;
-} name_index_Buff;
+// typedef struct
+// {
+//     char name[MAX_LEN_NAME];
+//     int index;
+// } name_index_Buff;
 
 typedef enum
 {
@@ -71,7 +71,7 @@ typedef enum
 
 typedef struct
 {
-    bool room_id[MAX_NUM_ROOM]; // 预约了房间号为i的房间则room_id[i]=true
+    // bool room_id[MAX_NUM_ROOM]; // 预约了房间号为i的房间则room_id[i]=true
     bool flag[MAX_NUM_ROOM][2][13][32];
 } reserveRoom;
 
