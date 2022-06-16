@@ -86,8 +86,8 @@ char *enumtostr(command_type command) {
 void rqt_process(struct request *rqt) {
     // 模拟客人操作时间
     sleep(rqt->time);
-    sem_wait(roomSem);
-    printf("%-13s room_num=%-3d room_id=%-3d %4d-%2d-%-2d reserve_days=%-2d name=%s\n",
+    sem_wait(mutexSem);
+    printf("%-13s room_num=%-3d room_id=%-3d %4d %2d-%-2d reserve_days=%-2d name=%s\n",
            enumtostr(rqt->command),
            rqt->room_num,
            rqt->room_id,
@@ -120,7 +120,7 @@ void rqt_process(struct request *rqt) {
     case CHECK:
         check(rqt);
     }
-    sem_post(roomSem);
+    sem_post(mutexSem);
 }
 
 /**

@@ -4,9 +4,10 @@
 #ifndef HOTEL_SYSTEM_PROCESS
 #define HOTEL_SYSTEM_PROCESS
 
-extern roomInfo_shm *roomInfo; // 声明共享内存区变量，函数中需要调用
-extern reserveInfo_shm *reserveInfo;
-extern sem_t *roomSem;
+
+extern roomInfo_shm *roomInfo; // 房间信息的共享内存区
+extern reserveInfo_shm *reserveInfo;    // 预约信息的共享内存区
+extern sem_t *mutexSem;  // mu
 extern sem_t *processSem;
 
 
