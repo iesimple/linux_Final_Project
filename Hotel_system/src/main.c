@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ * @author iesimple
+ * @brief
+ * @version 0.1
+ * @date 2022-06-16
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
+
 /*
     宾馆预约系统
     1. 读取输入（文件）
@@ -8,6 +19,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 #include "systemInit.h"
 
 #define MAX_LEN_PATH 30
@@ -17,7 +29,13 @@
  * @param filepath 输入文件的路径，如果为NULL则是默认路径 "../resource/in.txt"
  */
 void systemRun(const char *filepath) {
+    clock_t start, finish;
+    double duration;
+    start = clock();
     systemStart(filepath);
+    finish = clock();
+    duration = (double)(finish - start) / CLOCKS_PER_SEC;
+    printf("总耗时：%f seconds\n", duration);
 }
 
 int main(int argc, char **argv) {
